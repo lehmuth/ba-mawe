@@ -3,11 +3,22 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Landing Page</title>
+        <title>Component Preview</title>
         <link rel="stylesheet" href="styles/common.css">
-        <link rel="stylesheet" href="styles/landing_page.css">
+        <!-- Individual imports -->
+        <link rel="stylesheet" href="styles/component-preview.css">
+        <script src="scripts/component-preview.js" defer></script>
+        <script type="module" src="components/page-template.js"></script>
+        <script type="module" src="components/progress-bar.js"></script>
+        <script type="module" src="components/bold-button.js"></script>
     </head>
     <body>
-        Yeah I'm the landing page
+        <progress-bar min="10" max="100" current="30" id="bar-1"></progress-bar>
+        <br/>
+        <button onclick="add(10)">Add</button>
+        <button onclick="subtract(10)">Subtract</button>
+        <button onclick="add(100)">Fill</button>
+        <button onclick="subtract(100)">Empty</button>
+        <bold-button onclick="reset()">reset</bold-button>
     </body>
 </html>

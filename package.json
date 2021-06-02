@@ -7,6 +7,12 @@
   "author": "Manuel Kohler",
   "private": true,
   "scripts": {
-    "build": "echo 'No build necessary' && exit 0"
+    "build": "echo 'No build necessary' && exit 0",
+    "dev": "browser-sync start --server src --files src --port 8000 --no-ui --no-notify"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "eslint": "^7.27.0",
+    "prettier": "^2.3.0"
   }
 }
