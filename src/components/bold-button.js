@@ -7,6 +7,8 @@ template.innerHTML = `
             color: #fff;
             text-decoration: none;
             text-transform: uppercase;
+            box-sizing: border-box;
+            margin: 10px;
         }
 
         .clickable {
