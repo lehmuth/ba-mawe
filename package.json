@@ -1,0 +1,9 @@
+{
+  "name": "ba-mawe",
+  "version": "1.0.0",
+  "description": "The code for the bachelor thesis of Manuel Kohler",
+  "main": "src/index.html",
+  "repository": "https://github.com/lehmuth/ba-mawe.git",
+  "author": "Manuel Kohler",
+  "private": true
+}
