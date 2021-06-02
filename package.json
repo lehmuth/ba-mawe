@@ -5,5 +5,8 @@
   "main": "src/index.html",
   "repository": "https://github.com/lehmuth/ba-mawe.git",
   "author": "Manuel Kohler",
-  "private": true
+  "private": true,
+  "scripts": {
+    "build": "echo 'No build necessary' && exit 0"
+  }
 }
