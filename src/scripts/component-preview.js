@@ -24,8 +24,10 @@ const parallax = document.querySelector('#parallax');
 // { 0 }    => moving with same speed as default elements -> no result
 // (-inf;0) => moving faster than default elements in opposite direction
 // { -1 }   => moving twice as fast as default elements in opposite direction
-const speedRatio = -0.5;
+const speedRatio = 0.2;
 const range = 30;
+const fps = 40;
+parallax.style.transitionDuration = 1 / fps;
 
 function render () {
     // Load window bounds and scroll direction
@@ -47,4 +49,4 @@ function render () {
     }
 }
 
-setInterval(render, 1000 / 120);
+setInterval(render, 1000 / fps);

@@ -15,15 +15,11 @@ body {
 }
 
 #parallax {
-    width: 200px;
+    width: 100%;
     height: 500px;
     background-color: #000;
     position: absolute;
     top: 110vh;
-}
-
-#placeholder {
-    min-height: 300vh;
-    max-width: 40rem;
-    margin: auto;
+    transition: translate .016s linear;
+    z-index: 0;
 }
