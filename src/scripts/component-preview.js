@@ -27,7 +27,7 @@ const parallax = document.querySelector('#parallax');
 const speedRatio = 0.2;
 const range = 30;
 const fps = 40;
-parallax.style.transitionDuration = 1 / fps;
+// parallax.style.transitionDuration = 1 / fps;
 
 function render () {
     // Load window bounds and scroll direction

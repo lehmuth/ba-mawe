@@ -16,7 +16,7 @@ template.innerHTML = `
         }
 
         #text {
-            max-width: 40rem;
+            max-width: 80%;
             margin: auto;
             color: white;
             mix-blend-mode: difference;
