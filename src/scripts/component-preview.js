@@ -26,7 +26,7 @@ const parallax = document.querySelector('#parallax');
 // { -1 }   => moving twice as fast as default elements in opposite direction
 const speedRatio = 0.2;
 const range = 30;
-const fps = 40;
+const fps = 60;
 // parallax.style.transitionDuration = 1 / fps;
 
 function render () {
