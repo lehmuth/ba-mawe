@@ -30,7 +30,7 @@ const fps = 60;
 // parallax.style.transitionDuration = 1 / fps;
 
 function render () {
-    // Load window bounds and scroll direction
+    // Load window bounds (currently visible range on y axis)
     const winTop = document.documentElement.scrollTop || document.body.scrollTop;
     const winBottom = winTop + window.innerHeight;
 
