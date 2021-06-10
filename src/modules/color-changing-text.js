@@ -7,12 +7,10 @@ template.innerHTML = `
 
         #bg-white {
             background-color: #fff;
-            z-index: 0;
         }
 
         #bg-black {
             background-color: #000;
-            z-index: 1;
         }
 
         #text {
@@ -20,7 +18,6 @@ template.innerHTML = `
             margin: auto;
             color: white;
             mix-blend-mode: difference;
-            z-index: 2;
         }
     </style>
     <div id="bg-black">
@@ -33,11 +30,11 @@ template.innerHTML = `
 `;
 
 class ColorChangingText extends HTMLElement {
-    constructor() {
-        super();
-        const shadowRoot = this.attachShadow({mode: 'closed'});
-        shadowRoot.appendChild(template.content.cloneNode(true));
-    }
+  constructor() {
+    super();
+    const shadowRoot = this.attachShadow({ mode: 'closed' });
+    shadowRoot.appendChild(template.content.cloneNode(true));
+  }
 }
 
 window.customElements.define('color-changing-text', ColorChangingText);

@@ -1,5 +1,4 @@
 
 vscode:
   extensions:
-    - ritwickdey.liveserver
-    - auchenberg.vscode-browser-preview
+    - esbenp.prettier-vscode
