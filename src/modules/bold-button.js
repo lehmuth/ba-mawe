@@ -16,16 +16,24 @@ const styles = css`
   }
 
   #container {
+    /* Sizing */
     min-width: 100%;
-    background-color: #000;
+    box-sizing: border-box;
+
+    /* Align children */
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: center;
+
+    /* Appearance */
     padding: 10px;
+    background-color: #000;
     color: #fff;
+
+    /* Reset default a styles */
     text-decoration: none;
     text-transform: uppercase;
-    box-sizing: border-box;
   }
 
   .clickable {
@@ -34,14 +42,17 @@ const styles = css`
 
   #label {
     flex: 0;
+    white-space: nowrap;
   }
 
   #bracket {
-    flex: 0;
+    display: none;
   }
 
-  .unlinked > #bracket {
-    display: none;
+  .linking > #bracket {
+    display: block;
+    flex: 0;
+    margin-left: 10px;
   }
 `;
 
@@ -49,7 +60,7 @@ defineComponent(
   'bold-button',
   class extends HTMLElement {
     static get observedAttributes() {
-      return ['href', 'onclick'];
+      return ['href', 'onclick', 'nobracket'];
     }
 
     constructor() {
@@ -70,15 +81,37 @@ defineComponent(
       this.setAttribute('href', value);
     }
 
+    get onclick() {
+      return this.getAttribute('onclick');
+    }
+
+    set onclick(value) {
+      this.setAttribute('onclick', value);
+    }
+
+    get nobracket() {
+      return this.hasAttribute('nobracket');
+    }
+
+    set nobracket(value) {
+      if (value) {
+        this.setAttribute('nobracket', '');
+      } else {
+        this.removeAttribute('nobracket');
+      }
+    }
+
     attributeChangedCallback(name, oldVal, newVal) {
       if (oldVal !== newVal) {
         switch (name) {
           case 'href':
             this.href = newVal;
-            this.clickable = newVal ? true : false;
             break;
           case 'onclick':
-            this.clickable = newVal ? true : false;
+            this.onclick = newVal;
+            break;
+          case 'nobracket':
+            this.nobracket = newVal;
             break;
         }
         this.render();
@@ -86,18 +119,26 @@ defineComponent(
     }
 
     render() {
+      let clickable;
       if (!this.href) {
         this.container.removeAttribute('href');
-        this.container.classList.add('unlinked');
+        clickable = false;
       } else {
         this.container.setAttribute('href', this.href);
-        this.container.classList.remove('unlined');
+        clickable = true;
       }
 
-      if (this.clickable) {
+      if (this.onclick) {
+        clickable = true;
+      }
+
+      if (clickable) {
         this.container.classList.add('clickable');
+        if (!this.nobracket) {
+          this.container.classList.add('linking');
+        }
       } else {
-        this.container.classList.remove('clickable');
+        this.container.classList.remove('clickable', 'linking');
       }
     }
   }
