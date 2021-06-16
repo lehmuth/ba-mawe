@@ -10,13 +10,6 @@ bold-button.bar {
   min-width: 150px;
 }
 
-:root {
-  font-family: active, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 40px;
-}
-
 #parallax {
   /*width: 250px;
   height: 500px;*/

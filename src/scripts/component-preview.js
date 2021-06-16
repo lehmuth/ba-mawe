@@ -14,8 +14,4 @@ Promise.all([
   import('../modules/color-changing-text.js'),
   import('../modules/progress-bar.js'),
   import('../modules/parallax-container.js'),
-]).then(() => {
-  const button = document.createElement('bold-button');
-  button.innerHTML = 'lalalala';
-  document.querySelector('body').appendChild(button);
-});
+]).then(() => {});

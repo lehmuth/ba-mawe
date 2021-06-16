@@ -12,7 +12,6 @@ const template = html`
 const styles = css`
   :host {
     display: inline-block;
-    box-sizing: boder-box;
   }
 
   #container {
@@ -21,7 +20,7 @@ const styles = css`
     box-sizing: border-box;
 
     /* Align children */
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
