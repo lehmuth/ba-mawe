@@ -1,0 +1,19 @@
+#pc-1 {
+  top: 12em;
+  right: 0;
+}
+
+#pc-1 div {
+  width: 2.6em;
+  height: 10em;
+}
+
+#pc-2 {
+  top: 40vh;
+  left: 0;
+}
+
+#pc-2 div {
+  width: 0.8em;
+  height: 14em;
+}

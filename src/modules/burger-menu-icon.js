@@ -12,8 +12,7 @@ const template = html`
 
 const styles = css`
   :host {
-    font-size: 100px;
-    display: block;
+    display: inline-block;
   }
 
   #icon {
@@ -23,7 +22,6 @@ const styles = css`
     --burger-menu-icon-bar-height: calc(var(--burger-menu-icon-size) * 0.08);
     /* the height of the inner rectangle which contains the three bars */
     --burger-menu-icon-height: calc(var(--burger-menu-icon-size) * 0.5);
-    /* the duration of the open/ close animation */
 
     cursor: pointer;
     position: relative;
@@ -45,8 +43,10 @@ const styles = css`
     right: 0;
     height: var(--burger-menu-icon-bar-height);
     width: 100%;
-    background-color: #000;
-    transition: all 0.3s linear;
+    background: #fff;
+    transition-property: all;
+    transition-timing-function: linear;
+    transition-duration: var(--burger-menu-animation-duration);
     opacity: 1;
     transform-origin: right;
   }
@@ -61,10 +61,6 @@ const styles = css`
 
   #bar-3 {
     top: calc(100% - var(--burger-menu-icon-bar-height));
-  }
-
-  :host([active]) .bar {
-    background-color: #fff;
   }
 
   :host([active]) #bar-2 {
@@ -88,8 +84,8 @@ defineComponent(
       this.bar1 = shadowRoot.querySelector('#bar-1');
       this.bar2 = shadowRoot.querySelector('#bar-2');
       this.bar3 = shadowRoot.querySelector('#bar-3');
-      this.active = this.active || false;
       this.toggle = this.toggle.bind(this);
+      this.active = this.active || false;
     }
 
     connectedCallback() {
@@ -115,21 +111,20 @@ defineComponent(
 
     attributeChangedCallback(name, oldVal, newVal) {
       if (oldVal !== newVal) {
-        switch (name) {
-          case 'active':
-            this.dispatchEvent(
-              new CustomEvent(this.active ? 'open' : 'close', {
-                details: { active: this.active ? true : false },
-              })
-            );
-            break;
-        }
         this.render();
       }
     }
 
     toggle() {
-      this.active = !this.active;
+      const handle = this.dispatchEvent(
+        new CustomEvent(this.active ? 'close' : 'open', {
+          cancelable: true,
+          detail: { active: !this.active },
+        })
+      );
+      if (handle) {
+        this.active = !this.active;
+      }
     }
 
     render() {

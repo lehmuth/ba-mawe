@@ -10,14 +10,19 @@ bold-button.bar {
   min-width: 150px;
 }
 
-#parallax {
-  /*width: 250px;
-  height: 500px;*/
-  background-color: #000;
-  z-index: 0;
+burger-menu {
+  z-index: 60;
 }
 
-.parallax-container {
-  transform: translate(-100px, -100px);
-  z-index: 30;
+#parallax-container {
+  position: absolute;
+  top: 80vh;
+  right: 0;
+  z-index: 50;
+}
+
+#parallax {
+  width: 250px;
+  height: 500px;
+  background-color: #000;
 }

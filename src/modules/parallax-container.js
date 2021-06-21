@@ -9,7 +9,6 @@ const template = html`
 const styles = css`
   :host {
     display: block;
-    z-index: 5;
   }
 
   #container {
@@ -50,7 +49,6 @@ defineComponent(
 
     set distance(value) {
       this.setAttribute('distance', value);
-      console.log('set to ', this.distance);
     }
 
     get fps() {
@@ -63,14 +61,7 @@ defineComponent(
 
     attributeChangedCallback(name, oldVal, newVal) {
       if (oldVal !== newVal) {
-        switch (name) {
-          case 'fps':
-            this.fps = newVal;
-            break;
-          case 'distance':
-            this.distance = newVal;
-            break;
-        }
+        this.render();
       }
     }
 
