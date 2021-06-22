@@ -10,8 +10,7 @@ const styles = css`
   :host {
     display: inline-block;
     position: relative;
-    min-width: 2em;
-    padding: 0.2em 1em 0.2em 0.2em;
+    padding: 0.2em 0.2em 0.2em 1em;
   }
 
   #display {
@@ -36,7 +35,7 @@ const styles = css`
     bottom: 50%;
     padding-bottom: 0;
     background-image: url(../assets/arrow-up.svg);
-    background-position: bottom 0.02em right 0.2em;
+    background-position: bottom 0.02em left 0.2em;
   }
 
   #down {
@@ -44,7 +43,7 @@ const styles = css`
     bottom: 0;
     padding-top: 0;
     background-image: url(../assets/arrow-down.svg);
-    background-position: top 0.02em right 0.2em;
+    background-position: top 0.02em left 0.2em;
   }
 `;
 

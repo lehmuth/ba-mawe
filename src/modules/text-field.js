@@ -147,7 +147,6 @@ defineComponent(
     }
 
     attributeChangedCallback(name, oldVal, newVal) {
-      console.log(name);
       if (oldVal !== newVal) {
         this.render();
       }
