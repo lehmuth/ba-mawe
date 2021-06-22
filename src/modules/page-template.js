@@ -51,7 +51,6 @@ const styles = css`
     display: block;
     margin: 0.6em 1em -0.6em auto;
     font-size: 1.25em;
-
     mix-blend-mode: difference;
   }
 
@@ -82,6 +81,12 @@ const styles = css`
 
   page-footer {
     flex: 0 0 auto;
+  }
+
+  /* Utility classes for content (only available for directtly slotted elements) */
+  slot[name='content']::slotted(.oversize) {
+    width: calc(100% + 2 * var(--container-padding));
+    margin-left: calc(-1 * var(--container-padding));
   }
 `;
 

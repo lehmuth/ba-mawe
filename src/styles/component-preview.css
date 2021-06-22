@@ -1,4 +1,4 @@
-body {
+[slot='hero'] {
   text-align: center;
 }
 
@@ -8,10 +8,6 @@ bold-button {
 
 bold-button.bar {
   min-width: 150px;
-}
-
-burger-menu {
-  z-index: 60;
 }
 
 #parallax-container {

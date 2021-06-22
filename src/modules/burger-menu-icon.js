@@ -24,24 +24,23 @@ const styles = css`
     --burger-menu-icon-height: calc(var(--burger-menu-icon-size) * 0.5);
 
     cursor: pointer;
-    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
     height: var(--burger-menu-icon-size);
     width: var(--burger-menu-icon-size);
   }
 
   #inner {
-    position: relative;
-    top: calc(
-      (var(--burger-menu-icon-size) - var(--burger-menu-icon-height)) / 2
-    );
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
     height: var(--burger-menu-icon-height);
     width: 100%;
   }
 
   .bar {
-    position: absolute;
-    right: 0;
-    height: var(--burger-menu-icon-bar-height);
+    flex: 0 0 var(--burger-menu-icon-bar-height);
     width: 100%;
     background: #fff;
     transition-property: all;
@@ -49,18 +48,6 @@ const styles = css`
     transition-duration: var(--burger-menu-animation-duration);
     opacity: 1;
     transform-origin: right;
-  }
-
-  #bar-1 {
-    top: 0;
-  }
-
-  #bar-2 {
-    top: calc(50% - (var(--burger-menu-icon-bar-height) / 2));
-  }
-
-  #bar-3 {
-    top: calc(100% - var(--burger-menu-icon-bar-height));
   }
 
   :host([active]) #bar-2 {

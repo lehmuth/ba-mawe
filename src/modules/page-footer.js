@@ -170,7 +170,7 @@ defineComponent(
   class extends HTMLElement {
     constructor() {
       super();
-      const shadowRoot = attach(this, template, styles);
+      attach(this, template, styles);
     }
   }
 );

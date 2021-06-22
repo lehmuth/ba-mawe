@@ -10,8 +10,10 @@ function reset() {
 
 Promise.all([
   import('../modules/bold-button.js'),
-  import('../modules/burger-menu.js'),
-  import('../modules/color-changing-text.js'),
+  import('../modules/page-template.js'),
   import('../modules/progress-bar.js'),
   import('../modules/parallax-container.js'),
+  import('../modules/text-field.js'),
+  import('../modules/range-slider.js'),
+  import('../modules/counter-spinner.js'),
 ]).then(() => {});
