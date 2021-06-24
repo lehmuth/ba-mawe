@@ -33,7 +33,9 @@ const styles = css`
 
   #image {
     flex: 0 0 6em;
-    background-color: red;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   #content {

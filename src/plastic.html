@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Plastik Verschmutzung</title>
+    <link rel="stylesheet" href="styles/common.css" />
+    <!-- Individual imports -->
+    <link rel="stylesheet" href="styles/plastic.css" />
+    <script src="scripts/plastic.js"></script>
+  </head>
+  <body>
+    <page-template>
+      <!-- HERO -->
+      <div slot="hero" id="hero">
+        <div>
+          <h1 id="hero-header-desktop">Plastik-<br/>Verschmutzung!</h1>
+          <h1 id="hero-header-mobile">Plastikver-<br/>schmutzung!</h1>
+          <detailed-text>
+            Plastik ist ein robuster, vielseitiger Kunststoff der für unzählige Einsatzzwecke verwendet werden kann. Ob für Einkaufstüten, Verpackungsmaterialien, Kleidung, Besteck oder Spielzeuge, es sind keine Grenzen in der Variation gesetzt. Doch mit dieser enormen Masse kommt auch das Problem mit der Entsorgung. Es fehlt an Strukturen zum Sammeln und Recyceln von Plastik. Das bedeutet es wird anderweitig entsorgt und landet somit irgendwann in den Meeren. Vor allem Einwegplastik zählt zu den größten Verschmutzern.<br/>
+            „Eine derzeitige Schätzung des globalen Eintrags von Plastikmüll in die Meere geht von 4,8 bis 12,7 Millionen Tonnen pro Jahr aus. Das entspricht einer Lastwagenladung pro Minute.“ (WWF)<br/>
+            Mittlerweile ist die Verschmutzung so schlimm geworden, dass ganze Inseln aus Müll entstanden sind. Riesige Müllteppiche die die Größe von Deutschland einnehmen und täglich größer und größer werden schwimmen in den Meeren. Durch den Plastikmüll werden nicht nur Lebensräume vollständig zerstört, sondern auch unzählige Tierarten bedroht. Zum einen geben viele Kunststoffe umwelt- und gesundheitsschädliche Substanzen ab und vergiften die Tiere, zum anderen verstopfen Plastikteile, die über die Nahrung aufgenommen werden, die Mägen der Tiere oder sie verwechseln größere Plastikteile mit ihrer Beute und ersticken an diesen. Es betrifft aber nicht nur die Tierwelt. Mikroplastik, winzige Plastikteilchen, schädigen ganze Meeresorganismen und werden von Fischen so wie Vögeln aufgenommen und landen dann auf unserem Speiseplan. Mikroplastik ist krebserregend und hat einen negativen Einfluss auf unserem Hormonhaushalt.<br/>
+            Plastik gehört zur Normalität in unserem Alltag dazu, deshalb ist es wichtig darüber aufzuklären und aufmerksam zu machen! Wir müssen Alternativen finden und Plastik in allen Bereichen des Lebens minimieren. Ebenso müssen wir besser darauf achten richtig zu recyceln und besser in langlebigere Produkte zu investieren. <br/>
+            Mit dem Kauf einer dieser Patches unterstützt du die <a href="https://www.oceancare.org/de/startseite/" target="_blank">OceanCare Stiftung</a>. Diese sorgt weltweit dafür, dass die Ozeane und deren Bewohner geschützt werden und fordert gesetzliche Grundlagen, die zu einer Begrenzung der Produktion und des Verbrauchs von Plastik führen sollen. <br/>
+
+          </detailed-text>
+        </div>
+        <img src="assets/plastic.jpg" alt="Plastik hero image" />
+      </div>
+      <!-- CONTENT -->
+      <div id="content" slot="content">
+        <div class="left straight">
+          <div class="product" id="sea-food">
+            <img src="assets/seafood.png" alt="Sea Food Preview" />
+            <div class="product-content">
+              <h3>„Sea Food“</h3>
+              <p>Pro Minute kippen wir ungefähr eine Lastwagenladung Plastik in die Meere! Mikroplastik steht auf dem Speiseplan der Meeresbewohner und landet somit auch auf unseren Tellern!</p>
+            </div>
+            <parallax-container distance="400">
+              <plus-button product-id="sea-food"></plus-button>
+            </parallax-container>
+          </div>
+        </div>
+        <div class="right straight">
+          <div class="product" id="fishbowl">
+            <img src="assets/fishbowl.png" alt="Fish Bowl Preview" />
+            <div class="product-content">
+              <h3>„Fishbowl“</h3>
+              <p>Die Unmengen an Plastik bilden bereits eigene Inseln in unseren Meeren und vernichten wichtige Lebensräume! Unzählige Arten von Meeresbewohnern sind davon bedroht.</p>
+            </div>
+            <parallax-container distance="500">
+              <plus-button product-id="fishbowl"></plus-button>
+            </parallax-container>
+          </div>
+        </div>
+        <h1>Bio-Shirts</h1>
+        <p>Nachhaltige, streng zertifizierte Bio-Baumwollshirts aus kontrollierter fairer Herstellung. Jedes Shirt kommt mit aufgenähtem Gegenstück für die Patches und einem Logo Backprint im Nacken.</p>
+        <div class="right straight">
+          <div class="product" id="oversized-t">
+            <img src="assets/oversized-t.png" alt="Oversized T Preview" />
+            <div class="product-content">
+              <h3>„OVERSIZED T“</h3>
+              <p>Schlichter oversized Schnitt mit Rundhals. Moderne Oversized Silhouette die vielseitig kombinierbar ist.</p>
+            </div>
+            <parallax-container distance="450">
+              <plus-button product-id="oversized-t"></plus-button>
+            </parallax-container>
+          </div>
+        </div>
+        <div class="left reversed">
+          <div class="product" id="cropped-t">
+            <img src="assets/cropped-t.png" alt="Cropped T Preview" />
+            <div class="product-content">
+              <h3>„Cropped T“</h3>
+              <p>Lässig kurzes Oberteil im modisch kastenförmigen Schnitt. Mehr als nur Basic!</p>
+            </div>
+            <parallax-container distance="200">
+              <plus-button product-id="cropped-t"></plus-button>
+            </parallax-container>
+          </div>
+        </div>
+      </div>
+      <parallax-container slot="overlay" distance="-500" id="parallax-1"><div></div></parallax-container>
+      <parallax-container slot="overlay"><div id="parallax-2"></div></parallax-container>
+    </page-template>
+  </body>
+</html>

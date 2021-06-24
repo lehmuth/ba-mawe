@@ -12,12 +12,28 @@ export const products = {
     subline: '15 x 15 cm Kollektion Depression',
     image: '/assets/depression-is-real.jpg',
     donation: 5,
-    price: 15,
+    price: 10,
     sizable: false,
   },
+  'sea-food': {
+    name: 'Patch: Sea Food',
+    subline: '15 x 15 cm Kollektion Plastikverschmutzung',
+    image: '/assets/seafood.png',
+    donation: 5,
+    price: 10,
+    sizable: false,
+  },
+  'fishbowl': {
+    name: 'Patch: Fishbowl',
+    subline: '15 x 15 cm Kollektion Plastikverschmutzung',
+    image: '/assets/fishbowl.png',
+    donation: 5,
+    price: 10,
+    sizable: false,
+  }
 };
 
-export const sizes = ['S', 'M', 'L', 'XL', 'XXL'];
+export const sizes = ['S (b)', 'M (b)', 'L (b)', 'XL (b)', 'XXL (b)', 'S (w)', 'M (w)', 'L (w)', 'XL (w)', 'XXL (w)'];
 
 class ShoppingCart {
   constructor() {

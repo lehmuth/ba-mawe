@@ -41,7 +41,6 @@ const styles = css`
 
   #hero {
     flex: 0 0 auto;
-    background-color: red;
     width: 100%;
   }
 

@@ -16,4 +16,5 @@ Promise.all([
   import('../modules/text-field.js'),
   import('../modules/range-slider.js'),
   import('../modules/plus-button.js'),
+  import('../modules/detailed-text.js'),
 ]).then(() => {});

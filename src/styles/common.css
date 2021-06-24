@@ -27,3 +27,19 @@ p[slot='content'] {
   margin: 0;
   text-align: justify;
 }
+
+h1 {
+  font-size: 4em;
+  margin: 0;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 2.5em;
+  margin: 0;
+  font-weight: 400;
+}
+
+detailed-text a {
+  color: #fff;
+}
