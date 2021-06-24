@@ -221,7 +221,6 @@ const styles = css`
     #support {
       flex-basis: 100%;
       max-width: 100%;
-      text-align: center;
       margin-bottom: 1rem; 
     }
 
