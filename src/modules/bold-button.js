@@ -1,4 +1,4 @@
-import { html, css, attach, defineComponent } from '../scripts/utils.js';
+import { html, css, attach, defineComponent } from '../utils/components.js';
 
 const template = html`
   <a id="container">
@@ -29,10 +29,19 @@ const styles = css`
     padding: 10px;
     background-color: #000;
     color: #fff;
+    border: solid 0.2em #000;
 
     /* Reset default a styles */
     text-decoration: none;
     text-transform: uppercase;
+
+    /* Add hover animation */
+    transition: all 0.2s linear;
+  }
+
+  #container.clickable:hover {
+    background-color: #fff;
+    color: #000;
   }
 
   .clickable {
@@ -59,7 +68,7 @@ defineComponent(
   'bold-button',
   class extends HTMLElement {
     static get observedAttributes() {
-      return ['href', 'onclick', 'nobracket'];
+      return ['href', 'onclick', 'nobracket', 'clickable'];
     }
 
     constructor() {
@@ -100,28 +109,28 @@ defineComponent(
       }
     }
 
+    get clickable() {
+      return this.hasAttribute('clickable');
+    }
+
+    set clickable(value) {
+      if (value) {
+        this.setAttribute('clickable', '');
+      } else {
+        this.removeAttribute('clickable');
+      }
+    }
+
     attributeChangedCallback(name, oldVal, newVal) {
       if (oldVal !== newVal) {
-        switch (name) {
-          case 'href':
-            this.href = newVal;
-            break;
-          case 'onclick':
-            this.onclick = newVal;
-            break;
-          case 'nobracket':
-            this.nobracket = newVal;
-            break;
-        }
         this.render();
       }
     }
 
     render() {
-      let clickable;
+      let clickable = this.clickable;
       if (!this.href) {
         this.container.removeAttribute('href');
-        clickable = false;
       } else {
         this.container.setAttribute('href', this.href);
         clickable = true;

@@ -1,4 +1,4 @@
-import { html, css, attach, defineComponent } from '../scripts/utils.js';
+import { html, css, attach, defineComponent } from '../utils/components.js';
 
 const template = html`
   <div id="container">
@@ -11,15 +11,15 @@ const styles = css`
   :host {
     font-size: 1em;
     display: block;
-    width: 500px;
   }
 
   #container {
-    padding: 20px 20px 10px 20px;
+    padding: 0.3em 0.3em 0.2em 0.3em;
     display: inline-flex;
     width: 100%;
     box-sizing: border-box;
     flex-flow: row-reverse nowrap;
+    align-items: baseline;
     position: relative;
   }
 
@@ -58,7 +58,7 @@ const styles = css`
     mix-blend-mode: difference;
     font-size: 1em;
     z-index: 2;
-    padding-left: 10px;
+    padding-left: 0.2em;
   }
 
   #suffix ~ input {
@@ -102,11 +102,11 @@ defineComponent(
 
     connectedCallback() {
       this.render();
-      this.input.addEventListener('keypress', this.updateValue);
+      this.input.addEventListener('change', this.updateValue);
     }
 
     disconnectedCallback() {
-      this.input.removeEventListener('keypress', this.updateValue);
+      this.input.removeEventListener('change', this.updateValue);
     }
 
     get suffix() {

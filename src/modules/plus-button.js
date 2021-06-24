@@ -1,4 +1,5 @@
-import { html, css, attach, defineComponent } from '../scripts/utils.js';
+import { html, css, attach, defineComponent } from '../utils/components.js';
+import { shoppingCart, products } from '../utils/shopping-cart.js';
 
 const template = html`
   <div id="container">
@@ -8,6 +9,10 @@ const template = html`
 `;
 
 const styles = css`
+  :host {
+    display: inline-block;
+  }
+
   #container {
     padding: 0.5em 0.25em;
     display: flex;
@@ -49,9 +54,41 @@ const styles = css`
 defineComponent(
   'plus-button',
   class extends HTMLElement {
+    static get observedAttributes() {
+      return ['product-id'];
+    }
+
     constructor() {
       super();
       attach(this, template, styles);
+      this.addToCart = this.addToCart.bind(this);
+    }
+
+    connectedCallback() {
+      this.addEventListener('click', this.addToCart);
+    }
+
+    disconnectedCallback() {
+      this.removeEventListener('click', this.addToCart);
+    }
+
+    get productId() {
+      return this.getAttribute('product-id');
+    }
+
+    set productId(value) {
+      this.setAttribute('product-id', value);
+    }
+
+    addToCart() {
+      if (this.productId && products[this.productId]) {
+        shoppingCart.add(this.productId);
+        this.dispatchEvent(
+          new CustomEvent('change', {
+            detail: { count: shoppingCart.items.length, item: this.productId },
+          })
+        );
+      }
     }
   }
 );

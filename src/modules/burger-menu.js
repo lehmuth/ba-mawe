@@ -1,4 +1,4 @@
-import { html, css, defineComponent, attach } from '../scripts/utils.js';
+import { html, css, defineComponent, attach } from '../utils/components.js';
 import './burger-menu-icon.js';
 
 const template = html`
@@ -63,7 +63,7 @@ const styles = css`
     display: flex;
     flex-direction: column;
     flex: 0;
-    padding: 2.45em 1.25em 1.25em 1.25em;
+    padding: 2.45em 1em 1.25em 1.25em;
     background-color: #000;
   }
 

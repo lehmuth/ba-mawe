@@ -15,6 +15,5 @@ Promise.all([
   import('../modules/parallax-container.js'),
   import('../modules/text-field.js'),
   import('../modules/range-slider.js'),
-  import('../modules/counter-spinner.js'),
   import('../modules/plus-button.js'),
 ]).then(() => {});

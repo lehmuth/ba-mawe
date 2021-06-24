@@ -1,4 +1,4 @@
-import { html, css, attach, defineComponent } from '../scripts/utils.js';
+import { html, css, attach, defineComponent } from '../utils/components.js';
 
 const template = html`
   <div id="icon">
@@ -29,6 +29,19 @@ const styles = css`
     justify-content: center;
     height: var(--burger-menu-icon-size);
     width: var(--burger-menu-icon-size);
+    padding: 0.5rem;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    transition-duration: var(--burger-menu-animation-duration);
+    background-color: transparent;
+  }
+
+  #icon:hover {
+    background-color: #fff;
+  }
+
+  #icon:hover .bar {
+    background-color: #000;
   }
 
   #inner {
@@ -36,13 +49,14 @@ const styles = css`
     flex-flow: column nowrap;
     justify-content: space-between;
     height: var(--burger-menu-icon-height);
+    background-color: transparent;
     width: 100%;
   }
 
   .bar {
     flex: 0 0 var(--burger-menu-icon-bar-height);
     width: 100%;
-    background: #fff;
+    background-color: #fff;
     transition-property: all;
     transition-timing-function: linear;
     transition-duration: var(--burger-menu-animation-duration);
@@ -119,7 +133,7 @@ defineComponent(
         // calculate rotation angle of the bars threw arctan
         const angle = Math.atan(
           (this.innerRect.offsetHeight - this.bar1.offsetHeight) /
-            this.icon.offsetHeight
+            this.innerRect.offsetWidth
         );
         // rotate first and last bar in opposite directions
         this.bar1.style.transform = `skewY(${-angle}rad)`;

@@ -1,6 +1,7 @@
-import { html, css, attach, defineComponent } from '../scripts/utils.js';
+import { html, css, attach, defineComponent } from '../utils/components.js';
 import './burger-menu.js';
 import './burger-menu-icon.js';
+import './shopping-cart-icon.js';
 import './page-footer.js';
 
 const template = html`
@@ -8,6 +9,7 @@ const template = html`
     <slot name="hero"></slot>
   </div>
   <burger-menu-icon></burger-menu-icon>
+  <shopping-cart-icon></shopping-cart-icon>
   <burger-menu></burger-menu>
   <div id="overlay">
     <slot name="overlay"></slot>
@@ -45,11 +47,22 @@ const styles = css`
 
   burger-menu-icon {
     position: sticky;
-    top: 0.6em;
+    top: 1rem;
     height: 0;
     z-index: 15;
     display: block;
-    margin: 0.6em 1em -0.6em auto;
+    margin: 1rem 0.5rem -1rem auto;
+    font-size: 1.25em;
+    mix-blend-mode: difference;
+  }
+
+  shopping-cart-icon {
+    position: sticky;
+    top: 3rem;
+    height: 0;
+    z-index: 6;
+    display: block;
+    margin: 3.25rem 0.5rem -3.25rem auto;
     font-size: 1.25em;
     mix-blend-mode: difference;
   }
@@ -74,13 +87,21 @@ const styles = css`
 
   #content {
     flex: 1;
+    background-color: #fff;
+    z-index: 1;
     width: 100%;
     padding: 1em var(--container-padding);
     box-sizing: border-box;
+    position: relative;
   }
 
   page-footer {
+    z-index: 20;
     flex: 0 0 auto;
+  }
+
+  slot[name='content']::slotted(*) {
+    z-index: 1;
   }
 
   /* Utility classes for content (only available for directtly slotted elements) */

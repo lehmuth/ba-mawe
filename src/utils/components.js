@@ -19,6 +19,10 @@ export function attach(root, template, styles = undefined, closed = true) {
   return shadowRoot;
 }
 
-export function defineComponent(name, Class) {
-  customElements.define(name, Class);
+export function defineComponent(name, Class, is) {
+  if (is) {
+    customElements.define(name, Class, { extends: 'div' });
+  } else {
+    customElements.define(name, Class);
+  }
 }

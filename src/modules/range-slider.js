@@ -1,4 +1,4 @@
-import { html, css, attach, defineComponent } from '../scripts/utils.js';
+import { html, css, attach, defineComponent } from '../utils/components.js';
 import './text-field.js';
 
 const template = html`
@@ -39,7 +39,7 @@ const styles = css`
     cursor: pointer;
     border: none;
     border-radius: 50%;
-    box-shadow: 0 0 0 1em #fff;
+    box-shadow: 0 0 0 0.7em #fff;
   }
 
   #range::-moz-range-thumb {
@@ -49,12 +49,12 @@ const styles = css`
     cursor: pointer;
     border: none;
     border-radius: 50%;
-    box-shadow: 0 0 0 1em #fff;
+    box-shadow: 0 0 0 0.7em #fff;
   }
 
   #output {
     flex: 0 1 4em;
-    min-width: 100px;
+    min-width: 80px;
   }
 `;
 

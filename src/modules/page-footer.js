@@ -1,4 +1,4 @@
-import { html, css, attach, defineComponent } from '../scripts/utils.js';
+import { html, css, attach, defineComponent } from '../utils/components.js';
 import './bold-button.js';
 
 const template = html`
@@ -16,7 +16,7 @@ const template = html`
           ><a href="#">Datenschutz</a><a href="#">FAQ</a
           ><a href="#">Newsletter</a>
         </div>
-        <a href="#" id="insta"></a>
+        <a href="https://www.instagram.com/patch_wear_family/" id="insta"></a>
       </div>
     </div>
     <div id="icons">
@@ -144,7 +144,6 @@ const styles = css`
   }
 
   @media only screen and (max-width: 685px) {
-
     #content {
       padding-right: var(--container-padding);
     }

@@ -1,4 +1,4 @@
-import { html, css, attach, defineComponent } from '../scripts/utils.js';
+import { html, css, attach, defineComponent } from '../utils/components.js';
 
 const template = html`
   <div id="display"></div>
@@ -57,10 +57,6 @@ defineComponent(
     constructor() {
       super();
       const shadowRoot = attach(this, template, styles);
-      this.min = this.min || 0;
-      this.max = this.max || 1000;
-      this.value = this.value || 1;
-      this.step = this.step || 1;
       this.display = shadowRoot.querySelector('#display');
       this.upBtn = shadowRoot.querySelector('#up');
       this.downBtn = shadowRoot.querySelector('#down');
@@ -69,6 +65,10 @@ defineComponent(
     }
 
     connectedCallback() {
+      this.min = this.min || 0;
+      this.max = this.max || 1000;
+      this.value = this.value || 1;
+      this.step = this.step || 1;
       this.upBtn.addEventListener('click', this.countUp);
       this.downBtn.addEventListener('click', this.countDown);
       this.render();
@@ -112,6 +112,7 @@ defineComponent(
     }
 
     attributeChangedCallback(name, oldVal, newVal) {
+      console.log('attr changed');
       if (oldVal !== newVal) {
         switch (name) {
           case 'value':
@@ -127,13 +128,13 @@ defineComponent(
 
     countUp() {
       if (this.value + this.step <= this.max) {
-        this.value += this.step;
+        this.value = this.value + this.step;
       }
     }
 
     countDown() {
       if (this.value - this.step >= this.min) {
-        this.value -= this.step;
+        this.value = this.value - this.step;
       }
     }
 
