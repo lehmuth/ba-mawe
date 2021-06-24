@@ -130,10 +130,12 @@
 
 .straight p {
     margin: 0.55em 2.5em 0 0;
+    text-align: left;
 }
 
 .reversed p {
     margin: 0.55em 0 0 2.5em;
+    text-align: right;
 }
 
 .product parallax-container {

@@ -57,7 +57,7 @@ const styles = css`
 
   shopping-cart-icon {
     position: sticky;
-    top: 3rem;
+    top: 3.25rem;
     height: 0;
     z-index: 6;
     display: block;
