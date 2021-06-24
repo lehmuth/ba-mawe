@@ -14,8 +14,8 @@ const template = html`
       <a class="nav-item" href="/index.html">Startseite</a>
       <a class="nav-item" href="/overview.html">Shirts & Patches</a>
       <a class="nav-item" href="/index.html#bottom-nav">Themen & Missstände</a>
-      <a class="nav-item" href="#">Spenden</a>
-      <a class="nav-item" href="#">Mein Konto</a>
+      <a class="nav-item" href="/donations.html">Spenden</a>
+      <a class="nav-item" href="account.html">Mein Konto</a>
     </nav>
   </div>
   <div id="closer"></div>

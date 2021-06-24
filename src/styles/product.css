@@ -8,6 +8,11 @@
     display: inline-block;
 }
 
+.center {
+    align-self: center;
+    display: inline-block;
+}
+
 .product {
     display: inline-flex;
     flex-flow: column nowrap;
@@ -69,6 +74,14 @@
 
 .reversed parallax-container{
     left: 16.75em;
+}
+
+#oversized-t {
+    width: 28.75em;
+}
+
+#cropped-t {
+    width: 27.85em;
 }
 
 @media screen and (max-width: 530px) {

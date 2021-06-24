@@ -86,14 +86,6 @@
     width: 26.25em;
 }
 
-#oversized-t {
-    width: 28.75em;
-}
-
-#cropped-t {
-    width: 27.85em;
-}
-
 #content>p {
     width: 18em;
     margin: 0 0 -8.75em;
