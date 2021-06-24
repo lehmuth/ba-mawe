@@ -18,12 +18,14 @@ const styles = css`
     /* Sizing */
     min-width: 100%;
     box-sizing: border-box;
+    height: 100%;
 
     /* Align children */
     display: inline-flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
+    align-items: center;
 
     /* Appearance */
     padding: 10px;

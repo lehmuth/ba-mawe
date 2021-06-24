@@ -1,0 +1,84 @@
+.left {
+    align-self: flex-start;
+    display: inline-block;
+}
+
+.right {
+    align-self: flex-end;
+    display: inline-block;
+}
+
+.product {
+    display: inline-flex;
+    flex-flow: column nowrap;
+    margin: 3.75em 0;
+    position: relative;
+}
+
+.product img {
+    flex: 0 0 auto;
+    width: 15.5em;
+    max-width: 100%;
+}
+
+.straight img {
+    align-self: flex-end;
+}
+
+.reversed img {
+    align-self: flex-start;
+}
+
+.product-content {
+    margin-top: -2.5em;
+    align-self: flex-start;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.product-content h3 {
+    text-transform: uppercase;
+}
+
+.straight h3 {
+    text-align: left;
+}
+
+.reversed h3 {
+    text-align: right;
+}
+
+.straight p {
+    margin: 0.55em 2.5em 0 0;
+    text-align: left;
+}
+
+.reversed p {
+    margin: 0.55em 0 0 2.5em;
+    text-align: right;
+}
+
+.product parallax-container {
+    position: absolute;
+}
+
+.straight parallax-container{
+    right: 16.75em;
+}
+
+.reversed parallax-container{
+    left: 16.75em;
+}
+
+@media screen and (max-width: 530px) {
+    .product {
+        display: flex;
+        /* important as easier solution instead of override every single width */
+        width: 100% !important;
+    }
+
+    .product-content {
+        margin-top: 1.25em;
+    }
+}

@@ -1,19 +1,34 @@
-#pc-1 {
-  top: 12em;
-  right: 0;
+#bottom-nav {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: strech;
 }
 
-#pc-1 div {
-  width: 2.6em;
-  height: 10em;
+#bottom-nav a {
+  width: 50%;
+  line-height: 1em;
+  font-size: 4em;
+  height: 2em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  border: solid 0.2rem #000;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
 }
 
-#pc-2 {
-  top: 40vh;
-  left: 0;
+#bottom-nav a:first-child {
+  width: 100%;
+  height: 1.2em;
+  font-size: 6.875em;
+  margin-bottom: .5rem;
 }
 
-#pc-2 div {
-  width: 0.8em;
-  height: 14em;
+#bottom-nav a:hover {
+  background-color: #fff;
+  color: #000;
 }

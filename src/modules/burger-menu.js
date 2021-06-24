@@ -3,17 +3,19 @@ import './burger-menu-icon.js';
 
 const template = html`
   <div id="menu-container">
-    <img
-      id="logo"
-      src="../assets/logo_menu.png"
-      class="menu-element transparent"
-    />
+    <a href="/index.html" 
+        id="logo">
+      <img
+        src="../assets/logo_menu.png"
+        class="menu-element transparent"
+      />
+    </a>
     <nav id="menu" class="menu-element">
-      <a class="nav-item" href="#">Shirts & Patches</a>
-      <a class="nav-item" href="#">Themen & Missstände</a>
+      <a class="nav-item" href="/index.html">Startseite</a>
+      <a class="nav-item" href="/overview.html">Shirts & Patches</a>
+      <a class="nav-item" href="/index.html#bottom-nav">Themen & Missstände</a>
       <a class="nav-item" href="#">Spenden</a>
       <a class="nav-item" href="#">Mein Konto</a>
-      <a class="nav-item" href="#">Warenkorb</a>
     </nav>
   </div>
   <div id="closer"></div>
@@ -54,6 +56,10 @@ const styles = css`
 
   #logo {
     flex: 1;
+    height: 100%;
+  }
+
+  #logo img{
     object-fit: cover;
     width: auto;
     height: 100%;

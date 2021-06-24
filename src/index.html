@@ -2,123 +2,25 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
     <title>Component Preview</title>
     <link rel="stylesheet" href="styles/common.css" />
     <!-- Individual imports -->
-    <link rel="stylesheet" href="styles/component-preview.css" />
-    <script src="scripts/component-preview.js"></script>
+    <link rel="stylesheet" href="styles/landing-page.css" />
+    <script src="scripts/landing-page.js"></script>
   </head>
   <body>
     <page-template>
-      <div slot="hero">
-        <progress-bar
-          class="bar"
-          min="10"
-          max="100"
-          current="30"
-          id="bar-1"
-        ></progress-bar>
-        <br />
-        <bold-button class="bar" onclick="add(10)">Add 10</bold-button
-        ><bold-button class="bar" onclick="add(-10)">Subtract 10</bold-button>
-        <br />
-        <bold-button class="bar" onclick="add(100)">Add 100</bold-button
-        ><bold-button class="bar" onclick="add(-100)">Subtract 100</bold-button>
-        <br />
-        <bold-button onclick="reset()">Level-Up</bold-button>
-        <br />
-        <bold-button class="bar" href="./landing-page.html"
-          >I'm linking to landing page</bold-button
-        >
-      </div>
-      <detailed-text slot="content">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-        elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-        est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in
-        hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-        eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-        dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
-        te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-        dolore magna aliquam erat volutpat.
-      </detailed-text>
-      <text-field slot="content" suffix="€" placeholder="0" style="margin-top: 50px;"></text-field>
-      <text-field
-        slot="content"
-        placeholder="Placeholder"
-        style="margin-top: 20px"
-      ></text-field>
-      <range-slider slot="content" style="margin-top: 20px"></range-slider>
-      <plus-button slot="content" product-id="depression-is-real"></plus-button>
-      <div
-        style="margin-top: 50px; width: 10px; height: 10px"
-        slot="content"
-      ></div>
-      <plus-button slot="content" product-id="cropped-t" rotate></plus-button>
-      <p slot="content">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-        elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-        est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in
-        hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-        eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-        dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
-        te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-        dolore magna aliquam erat volutpat.
-      </p>
-      <div id="card" style="height: 300px" slot="content">
-        <parallax-container distance="127"
-          ><plus-button></plus-button
-        ></parallax-container>
-      </div>
-      <p slot="content">
-        Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-        suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem
-        vel eum<a href="#">test</a>
-        iriure dolor in hendrerit in vulputate velit esse molestie consequat,
-        vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
-        iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
-        duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis
-        eleifend option congue nihil imperdiet doming id quod mazim placerat
-        facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing
-        elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-        aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
-        tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-        consequat. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-        elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat,
-        et nonumy sed tempor et et invidunt justo labore Stet clita ea et
-        gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero
-        voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-        labore et dolore magna aliquyam erat.
-      </p>
+      <nav slot="content" id="bottom-nav" class="oversize">
+        <a href="overview.html">SHIRTS & PATCHES</a>
+        <a href="plastic.html" nobracket>PLASTIKVER<br/>SCHMUTZUNG</a>
+        <a href="depressions.html">DEPRESSIONEN</a>
+        <a href="fast-fashion.html">FAST FASHION</a>
+        <a href="racism.html">RASSISMUS</a>
+      </nav>
     </page-template>
   </body>
 </html>
