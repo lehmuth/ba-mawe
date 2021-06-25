@@ -10,11 +10,116 @@
     <link rel="stylesheet" href="styles/common.css" />
     <!-- Individual imports -->
     <link rel="stylesheet" href="styles/racism.css" />
-    <script src="scripts/racism.js"></script>
+    <script src="scripts/products.js"></script>
   </head>
   <body>
     <page-template>
-      
+      <!-- HERO -->
+      <div slot="hero" id="hero">
+        <div>
+          <h1 id="hero-header">Rassismus</h1>
+          <detailed-text
+            >Jeder von uns ist ein Unikat. Wir sehen unterschiedlich aus, wurden
+            unterschiedlich erzogen, haben unterschiedliche Ansichten und doch
+            verbindet uns etwas. Wir alle sind von der selben Rasse, Mensch.
+            Dennoch werden immer wieder Menschen aufgrund ihrer Hautfarbe,
+            Herkunft oder ihrer Religion minderwertig behandelt und ausgegrenzt.
+            Das Problem heißt Rassismus. <br /><br />
+
+            In unserem Alltag ist dieses Problem bereits so tief verankert, dass
+            wir es oft selbst nicht mehr bemerken. Wir gruppieren Menschen
+            aufgrund ihrer Erscheinung und bewerten diese Negativ aufgrund von
+            Vorurteilen die wir nicht belegen können. Das fängt bereits in der
+            Schule an, wenn nicht müttersprachige Kinder schlechter für ihre
+            Leistung bewertet werden und zieht sich bis in den Berufsalltag wenn
+            Menschen aufgrund ihrer Herkunft beim Bewerbungsverfahren
+            aussortiert werden. <br /><br />
+
+            Allein in Deutschland werten 7% der Bevölkerung Menschen aufgrund
+            ihrer Hautfarbe oder Abstammung ab. Weitere 19% der deutschen
+            Bevölkerung ist fremdenfeindlich eingestellt und ist gegen Ausländer
+            im „eigenen Land“. Die Abneigung gegen Asylsuchende ist noch größer!
+            54% der deutschen Bevölkerung werten diese Menschen ab und fordern
+            ihre Heimreise. Und es bleibt nicht nur bei schlimmen Aussagen:
+            „2020 zählte das Bundesinnenministerium (BMI) 9.420 rassistische
+            Straftaten“<br /><br />
+
+            Wir wissen nicht woher dieser Hass kommt aber wir wissen, dass es
+            nicht ok ist, über andere aufgrund ihres Aussehens oder ihrem
+            Glauben zu urteilen. Wir stehen zu dem Motto „one race, one world,
+            one love“!<br /><br />
+
+            Mit dem Kauf einer dieser Patches unterstützt du die
+            <a href="https://www.stiftung-toleranz.de" target="_blank"
+              >F. C. Flick Stiftung</a
+            >. Diese setzt sich gegen Rechtsextremismus, Intoleranz, Rassismus
+            und daraus motivierter Gewalt ein. Vor allem Kinder und Jugendliche
+            gehören zur Zielgruppe um frühstmöglich diese Gruppe
+            aufzuklären.</detailed-text
+          >
+        </div>
+        <img src="assets/racism.jpg" alt="Rasssismus hero image" />
+      </div>
+      <!-- CONTENT -->
+      <div id="content" slot="content">
+        <div class="center reversed" id="human">
+          <div class="product">
+            <img src="assets/human.png" alt="Human Preview" />
+            <div class="product-content">
+              <h3>„Human“</h3>
+              <p>
+                Dazu gibt es nichts anzumerken! Wir gehören alle zur selben
+                Rasse, Mensch! Rassismus ist Ignoranz und völlig unangebracht!
+              </p>
+            </div>
+            <parallax-container>
+              <plus-button product-id="human"></plus-button>
+            </parallax-container>
+          </div>
+        </div>
+        <h1>Bio-Shirts</h1>
+        <p>
+          Nachhaltige, streng zertifizierte Bio-Baumwollshirts aus
+          kontrollierter fairer Herstellung. Jedes Shirt kommt mit aufgenähtem
+          Gegenstück für die Patches und einem Logo Backprint im Nacken.
+        </p>
+        <div class="right straight" id="oversized-t">
+          <div class="product">
+            <img src="assets/oversized-t.png" alt="Oversized T Preview" />
+            <div class="product-content">
+              <h3>„OVERSIZED T“</h3>
+              <p>
+                Schlichter oversized Schnitt mit Rundhals. Moderne Oversized
+                Silhouette die vielseitig kombinierbar ist.
+              </p>
+            </div>
+            <parallax-container>
+              <plus-button product-id="oversized-t"></plus-button>
+            </parallax-container>
+          </div>
+          <parallax-container class="parallax-bar"
+            ><div></div
+          ></parallax-container>
+        </div>
+        <div class="left reversed" id="cropped-t">
+          <div class="product">
+            <img src="assets/cropped-t.png" alt="Cropped T Preview" />
+            <div class="product-content">
+              <h3>„Cropped T“</h3>
+              <p>
+                Lässig kurzes Oberteil im modisch kastenförmigen Schnitt. Mehr
+                als nur Basic!
+              </p>
+            </div>
+            <parallax-container>
+              <plus-button product-id="cropped-t"></plus-button>
+            </parallax-container>
+          </div>
+          <parallax-container class="parallax-bar"
+            ><div></div
+          ></parallax-container>
+        </div>
+      </div>
     </page-template>
   </body>
 </html>

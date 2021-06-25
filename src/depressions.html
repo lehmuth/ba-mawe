@@ -10,11 +10,136 @@
     <link rel="stylesheet" href="styles/common.css" />
     <!-- Individual imports -->
     <link rel="stylesheet" href="styles/depressions.css" />
-    <script src="scripts/depressions.js"></script>
+    <script src="scripts/products.js"></script>
   </head>
   <body>
     <page-template>
-      
+      <!-- HERO -->
+      <div slot="hero" id="hero">
+        <div>
+          <h1 id="hero-header">Depressionen</h1>
+          <detailed-text
+            >„Niedergeschlagenheit, traurige Verstimmung, Gefühllosigkeit,
+            Angst, Antriebsminderung, Selbstzweifel, Wertlosigkeit,
+            Hoffnungslosigkeit, Sinnlosigkeit, häufig begleitet von
+            Ängstlichkeit und Unruhe, Energielosigkeit, Appetitstörungen,
+            Gewichtsverlust, Libidoverlust, Schlafstörungen, Schmerzen,
+            Konzentrationsprobleme und Suizidideen sind typische Beschwerden und
+            Auffälligkeiten einer akuten Depression.“ Gefühlszustände die jeder
+            von uns kennt, die aber nach gewisser Zeit wieder verfliegen und
+            sich zum besseren wenden. Nicht so bei depressiven Menschen. Gerade
+            deswegen, weil jeder eine dieser Phasen durchmacht, werden
+            Depressionen in der Gesellschaft meist nur belächelt und nicht
+            anerkannt. <br /><br />
+            Depressionen sind die häufigsten psychischen Beeinträchtigungen die
+            in jedem Lebensabschnitt vorkommen können. Doch jeder Mensch ist
+            anders und somit auch der Krankheitsverlauf einer Depression. Um
+            diese zu erkennen muss eine sorgfältige Diagnose erstellt werden, um
+            den Erkrankten zurück auf den richtigen Weg zu leiten.<br /><br />
+            In den letzten Jahrzehnten nahm die Anzahl an depressiven Menschen
+            immer mehr zu. Erschreckend ist, dass die Erkrankten Jahr für Jahr
+            jünger werden, schlimmere Symptome aufweisen und somit andauernd
+            eingeschränkter werden. Gerade während der Corona-Pandemie sank das
+            Alter der Betroffenen rasant und immer mehr jüngere Menschen mussten
+            in Behandlung. Um die Symptome einzudämmen, sollte frühstmöglich ein
+            Arzt aufgesucht werden. Dazu ist es notwendig über die
+            Ernsthaftigkeit dieser Krankheit aufzuklären und Betroffene darauf
+            anzusprechen. <br /><br />
+            Mit dem Kauf einer dieser Patches unterstützt du die Stiftung
+            Depressionshilfe und das
+            <a
+              href="https://www.deutsche-depressionshilfe.de/start"
+              target="_blank"
+              >Deutsche Bündnis gegen Depression e.V.</a
+            >
+            Diese arbeiten kontinuierlich daran, die Versorgung von depressiv
+            Erkrankten zu verbessern, klären über Depressionen auf und
+            erforschen die Erkrankung.
+          </detailed-text>
+        </div>
+        <img src="assets/depression.jpg" alt="Depression hero image" />
+      </div>
+      <!-- CONTENT -->
+      <div id="content" slot="content">
+        <div class="left reversed" id="rorschach">
+          <div class="product">
+            <img src="assets/rorschach.png" alt="Rorschach Preview" />
+            <div class="product-content">
+              <h3>„Rorschach“</h3>
+              <p>
+                Der Rorschachtest ist ein bekannter Test für psychologische
+                Diagnosen. Jeder Mensch denkt anders, hat andere Erfahrungen
+                gemacht und erkennt deswegen unterschiedliche Formen und
+                Figuren. Erkrankte sehen hier nie mehr als das Negative.
+              </p>
+            </div>
+            <parallax-container>
+              <plus-button product-id="rorschach"></plus-button>
+            </parallax-container>
+          </div>
+          <parallax-container class="parallax-bar"
+            ><div></div
+          ></parallax-container>
+        </div>
+        <div class="center straight" id="pain">
+          <div class="product">
+            <img src="assets/pain.png" alt="Pain Preview" />
+            <div class="product-content">
+              <h3>„Pain“</h3>
+              <p>
+                Depressionen sind mit Unmengen an plagender Gefühle verbunden.
+                Zurück bleibt eine leere Hülle die nicht mehr weiter weiß. Mit
+                Hilfe kann man dies aber ändern!
+              </p>
+            </div>
+            <parallax-container>
+              <plus-button product-id="pain"></plus-button>
+            </parallax-container>
+          </div>
+        </div>
+        <h1>Bio-Shirts</h1>
+        <p>
+          Nachhaltige, streng zertifizierte Bio-Baumwollshirts aus
+          kontrollierter fairer Herstellung. Jedes Shirt kommt mit aufgenähtem
+          Gegenstück für die Patches und einem Logo Backprint im Nacken.
+        </p>
+        <div class="right straight" id="oversized-t">
+          <div class="product">
+            <img src="assets/oversized-t.png" alt="Oversized T Preview" />
+            <div class="product-content">
+              <h3>„OVERSIZED T“</h3>
+              <p>
+                Schlichter oversized Schnitt mit Rundhals. Moderne Oversized
+                Silhouette die vielseitig kombinierbar ist.
+              </p>
+            </div>
+            <parallax-container>
+              <plus-button product-id="oversized-t"></plus-button>
+            </parallax-container>
+          </div>
+          <parallax-container class="parallax-bar"
+            ><div></div
+          ></parallax-container>
+        </div>
+        <div class="left reversed" id="cropped-t">
+          <div class="product">
+            <img src="assets/cropped-t.png" alt="Cropped T Preview" />
+            <div class="product-content">
+              <h3>„Cropped T“</h3>
+              <p>
+                Lässig kurzes Oberteil im modisch kastenförmigen Schnitt. Mehr
+                als nur Basic!
+              </p>
+            </div>
+            <parallax-container>
+              <plus-button product-id="cropped-t"></plus-button>
+            </parallax-container>
+          </div>
+          <parallax-container class="parallax-bar"
+            ><div></div
+          ></parallax-container>
+        </div>
+      </div>
     </page-template>
   </body>
 </html>

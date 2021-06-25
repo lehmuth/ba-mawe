@@ -10,60 +10,103 @@
     <link rel="stylesheet" href="styles/common.css" />
     <!-- Individual imports -->
     <link rel="stylesheet" href="styles/fast-fashion.css" />
-    <script src="scripts/fast-fashion.js"></script>
+    <script src="scripts/products.js"></script>
   </head>
   <body>
     <page-template>
       <!-- HERO -->
       <div slot="hero" id="hero">
         <div>
-          <h1 id="hero-header">Fast-<br/>Fashion</h1>
+          <h1 id="hero-header">Fast-<br />Fashion</h1>
           <detailed-text>
-            Einen Verbrauch von 79 Milliarden Kubikmeter Wasser, 1715 Millionen Tonnen CO2 Emissionen und 92 Millionen Tonnen Müll. Die Fast Fashion Industrie hat einen enormen Einfluss auf unseren Planeten und gehört deshalb zu einen der größten Umweltverschmutzer der Welt. Produziert wird in ärmeren Ländern ohne Arbeitsbedingungen. Dabei werden Böden durch Pestizide unfruchtbar und Landschaften durch weitere Chemikalien zerstört. Die Arbeiter leiden an Unterernährung und bekommen nicht einmal genug Lohn um zu überleben. Und was machen wir? Unsere Kleiderschränke sind überfüllt und über die Hälfte der Klamotten tragen wir nur selten oder nie. Wir schätzen Textilien nicht mehr und sehen sie als austauschbar. Das hat zur Folge, dass wir diese nur nach ein paar mal tragen entsorgen, da wir schnell und einfach an neue, aktuelle Ware herankommen. Im Schnitt entsorgen wir jährlich 30kg Klamotten pro Kopf!<br/><br/>
-            Wir müssen unseren Kleiderkonsum regulieren und von Fast Fashion zu Slow Fashion wechseln. Mit dem Kauf einer dieser Patches unterstützt du die <a href="https://www.fashionrevolution.org">Fashion Revolution Foundation</a>. Diese hat sich zum Ziel gemacht die Fast Fashion Bewegung umzukrempeln und setzen sich für eine saubere, sichere, faire, transparente und verantwortungsvolle Modebranche ein.
+            Einen Verbrauch von 79 Milliarden Kubikmeter Wasser, 1715 Millionen
+            Tonnen CO2 Emissionen und 92 Millionen Tonnen Müll. Die Fast Fashion
+            Industrie hat einen enormen Einfluss auf unseren Planeten und gehört
+            deshalb zu einen der größten Umweltverschmutzer der Welt. Produziert
+            wird in ärmeren Ländern ohne Arbeitsbedingungen. Dabei werden Böden
+            durch Pestizide unfruchtbar und Landschaften durch weitere
+            Chemikalien zerstört. Die Arbeiter leiden an Unterernährung und
+            bekommen nicht einmal genug Lohn um zu überleben. Und was machen
+            wir? Unsere Kleiderschränke sind überfüllt und über die Hälfte der
+            Klamotten tragen wir nur selten oder nie. Wir schätzen Textilien
+            nicht mehr und sehen sie als austauschbar. Das hat zur Folge, dass
+            wir diese nur nach ein paar mal tragen entsorgen, da wir schnell und
+            einfach an neue, aktuelle Ware herankommen. Im Schnitt entsorgen wir
+            jährlich 30kg Klamotten pro Kopf!<br /><br />
+            Wir müssen unseren Kleiderkonsum regulieren und von Fast Fashion zu
+            Slow Fashion wechseln. Mit dem Kauf einer dieser Patches unterstützt
+            du die
+            <a href="https://www.fashionrevolution.org" target="_blank"
+              >Fashion Revolution Foundation</a
+            >. Diese hat sich zum Ziel gemacht die Fast Fashion Bewegung
+            umzukrempeln und setzen sich für eine saubere, sichere, faire,
+            transparente und verantwortungsvolle Modebranche ein.
           </detailed-text>
         </div>
         <img src="assets/fast-fashion.jpg" alt="Fast Fashion hero image" />
       </div>
       <!-- CONTENT -->
       <div id="content" slot="content">
-        <div class="center straight">
-          <div class="product" id="nothing-to-wear">
-            <img src="assets/nothing-to-wear.png" alt="Nothing To Wear Preview" />
+        <div class="center straight" id="nothing-to-wear">
+          <div class="product">
+            <img
+              src="assets/nothing-to-wear.png"
+              alt="Nothing To Wear Preview"
+            />
             <div class="product-content">
               <h3>„Nothing to wear“</h3>
-              <p>„Was ziehe ich heute nur an?“,“Das passt nirgends dazu!“ oder ähnliche Aussagen macht jeder von uns, obwohl wir vor einem prall gefüllten Kleiderschrank stehen.</p>
+              <p>
+                „Was ziehe ich heute nur an?“,“Das passt nirgends dazu!“ oder
+                ähnliche Aussagen macht jeder von uns, obwohl wir vor einem
+                prall gefüllten Kleiderschrank stehen.
+              </p>
             </div>
-            <parallax-container distance="400">
+            <parallax-container>
               <plus-button product-id="nothing-to-wear"></plus-button>
             </parallax-container>
           </div>
         </div>
         <h1>Bio-Shirts</h1>
-        <p>Nachhaltige, streng zertifizierte Bio-Baumwollshirts aus kontrollierter fairer Herstellung. Jedes Shirt kommt mit aufgenähtem Gegenstück für die Patches und einem Logo Backprint im Nacken.</p>
-        <div class="right straight">
-          <div class="product" id="oversized-t">
+        <p>
+          Nachhaltige, streng zertifizierte Bio-Baumwollshirts aus
+          kontrollierter fairer Herstellung. Jedes Shirt kommt mit aufgenähtem
+          Gegenstück für die Patches und einem Logo Backprint im Nacken.
+        </p>
+        <div class="right straight" id="oversized-t">
+          <div class="product">
             <img src="assets/oversized-t.png" alt="Oversized T Preview" />
             <div class="product-content">
               <h3>„OVERSIZED T“</h3>
-              <p>Schlichter oversized Schnitt mit Rundhals. Moderne Oversized Silhouette die vielseitig kombinierbar ist.</p>
+              <p>
+                Schlichter oversized Schnitt mit Rundhals. Moderne Oversized
+                Silhouette die vielseitig kombinierbar ist.
+              </p>
             </div>
-            <parallax-container distance="450">
+            <parallax-container>
               <plus-button product-id="oversized-t"></plus-button>
             </parallax-container>
           </div>
+          <parallax-container class="parallax-bar"
+            ><div></div
+          ></parallax-container>
         </div>
-        <div class="left reversed">
-          <div class="product" id="cropped-t">
+        <div class="left reversed" id="cropped-t">
+          <div class="product">
             <img src="assets/cropped-t.png" alt="Cropped T Preview" />
             <div class="product-content">
               <h3>„Cropped T“</h3>
-              <p>Lässig kurzes Oberteil im modisch kastenförmigen Schnitt. Mehr als nur Basic!</p>
+              <p>
+                Lässig kurzes Oberteil im modisch kastenförmigen Schnitt. Mehr
+                als nur Basic!
+              </p>
             </div>
-            <parallax-container distance="200">
+            <parallax-container>
               <plus-button product-id="cropped-t"></plus-button>
             </parallax-container>
           </div>
+          <parallax-container class="parallax-bar"
+            ><div></div
+          ></parallax-container>
         </div>
       </div>
     </page-template>

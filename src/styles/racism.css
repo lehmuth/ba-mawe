@@ -1,0 +1,65 @@
+@import './product.css';
+/* HERO */
+
+#hero {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  padding: 2rem 0 0 1rem;
+  max-width: 100%;
+}
+
+#hero div {
+  flex: 1;
+  z-index: 2;
+}
+
+#hero-header {
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  display: block;
+  margin: 5.5rem 0 0.5rem 1.25rem;
+}
+
+#hero detailed-text {
+  margin-left: -3rem;
+}
+
+#hero img {
+  flex: 0 0 18.5em;
+  width: 18.5em;
+  align-self: flex-start;
+  z-index: 1;
+}
+
+@media screen and (max-width: 755px) {
+  #hero {
+    flex-direction: column-reverse;
+    padding: 2rem 1rem 0 1rem;
+  }
+
+  #hero img {
+    align-self: center;
+  }
+
+  #hero div {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  #hero-header {
+    margin-top: 1rem;
+  }
+
+  #hero detailed-text {
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
+}
+
+/* CONTENT */
+
+#human {
+  --default-width: 24.25em;
+}

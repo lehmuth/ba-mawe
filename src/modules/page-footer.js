@@ -4,8 +4,11 @@ import './bold-button.js';
 const template = html`
   <div id="container">
     <div id="head">
-      <img src="../assets/logo_menu.png" id="logo" alt="Patch Wear Family"/>
-      <a href="https://www.instagram.com/patch_wear_family/" id="insta-mobile"></a>
+      <img src="../assets/logo_menu.png" id="logo" alt="Patch Wear Family" />
+      <a
+        href="https://www.instagram.com/patch_wear_family/"
+        id="insta-mobile"
+      ></a>
     </div>
     <div id="content">
       <a href="#" id="support">Jetzt Unterstützen! &gt;</a>
@@ -103,7 +106,8 @@ const styles = css`
     align-items: flex-end;
   }
 
-  #icons, #icons-mobile {
+  #icons,
+  #icons-mobile {
     flex: 0 3.75em;
     display: flex;
     flex-flow: column nowrap;
@@ -130,26 +134,31 @@ const styles = css`
     line-height: 1.2em;
   }
 
-  #icons > a, #icons-mobile > a {
+  #icons > a,
+  #icons-mobile > a {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  #icons a:nth-child(1), #icons-mobile a:nth-child(1) {
+  #icons a:nth-child(1),
+  #icons-mobile a:nth-child(1) {
     justify-content: flex-start;
   }
 
-  #icons a:nth-child(2), #icons-mobile a:nth-child(2) {
+  #icons a:nth-child(2),
+  #icons-mobile a:nth-child(2) {
     justify-content: flex-start;
   }
 
-  #icons a:nth-child(3), #icons-mobile a:nth-child(3) {
+  #icons a:nth-child(3),
+  #icons-mobile a:nth-child(3) {
     justify-content: flex-end;
   }
 
-  #insta, #insta-mobile {
+  #insta,
+  #insta-mobile {
     flex: 1;
     align-self: stretch;
     display: flex;
@@ -203,8 +212,9 @@ const styles = css`
     }
 
     #content {
-      padding: 1rem 1rem;
+      padding: 1rem 2.2rem;
       flex-flow: row wrap;
+      box-sizing: border-box;
     }
 
     #head {
@@ -221,7 +231,7 @@ const styles = css`
     #support {
       flex-basis: 100%;
       max-width: 100%;
-      margin-bottom: 1rem; 
+      margin-bottom: 1rem;
     }
 
     #icons {
@@ -241,7 +251,8 @@ const styles = css`
       height: 5em;
       background-position: bottom center;
       background-size: contain;
-      margin-right: 1rem;
+      margin-right: 2rem;
+      margin-bottom: 0.55rem;
     }
 
     #insta {
@@ -249,15 +260,25 @@ const styles = css`
     }
   }
 
-  @media only screen and (max-width: 520px) {
+  @media only screen and (max-width: 563px) {
     :host {
       font-size: 1.2em;
     }
+
+    #content {
+      padding: 1rem 1.8rem;
+    }
   }
 
-  @media only screen and (max-width: 430px) {
+  @media only screen and (max-width: 468px) {
     :host {
       font-size: 1em;
+    }
+  }
+
+  @media only screen and (max-width: 403px) {
+    #support {
+      font-size: 2em;
     }
   }
 `;

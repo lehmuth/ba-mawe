@@ -2,102 +2,84 @@
 /* HERO */
 
 #hero {
-    display: flex;
-    flex-flow: row nowrap;
-    padding: 2rem 1rem 0 0;
-    max-width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 2rem 1rem 0 0;
+  max-width: 100%;
 }
 
 #hero div {
-    flex: 1;
-    z-index: 2;
+  flex: 1;
+  z-index: 2;
 }
 
 #hero-header-desktop {
-    text-align: right;
-    text-transform: uppercase;
-    letter-spacing: 0px;
-    display: inline-block;
-    margin: 5.5rem 1rem 1rem 3rem;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  display: inline-block;
+  margin: 5.5rem 1rem 1rem 3rem;
 }
 
 #hero-header-mobile {
-    display: none;
+  display: none;
 }
 
 #hero detailed-text {
-    margin-right: -3rem
+  margin-right: -3rem;
 }
 
 #hero img {
-    flex: 0 0 18.5em;
-    width: 18.5em;
-    align-self: flex-start;
-    z-index: 1;
+  flex: 0 0 18.5em;
+  width: 18.5em;
+  align-self: flex-start;
+  z-index: 1;
 }
 
 @media screen and (max-width: 755px) {
-    #hero {
-        flex-direction: column-reverse;
-        padding: 2rem 1rem 0 1rem;
-    }
+  #hero {
+    flex-direction: column-reverse;
+    padding: 2rem 1rem 0 1rem;
+  }
 
-    #hero img {
-        align-self: center;
-    }
+  #hero img {
+    align-self: center;
+  }
 
-    #hero div {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-    }
+  #hero div {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
 
-    #hero-header-desktop {
-        display: none;
-    }
+  #hero-header-desktop {
+    display: none;
+  }
 
-    #hero-header-mobile {
-        text-align: right;
-        text-transform: uppercase;
-        letter-spacing: 0px;
-        margin: 1rem 1rem 0;
-        display: inline-block;
-    }
+  #hero-header-mobile {
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    margin: 1rem 1rem 0;
+    display: inline-block;
+  }
 
-    #hero detailed-text {
-        margin-right: -1rem;
-        margin-left: -1rem;
-    }
+  #hero detailed-text {
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
 }
 
 /* CONTENT */
 
-#content {
-    display: flex;
-    flex-flow: column nowrap;
-    width: 100%;
-}
-
 #sea-food {
-    width: 26.25em;
+  --default-width: 26.25em;
+  --parallax-width: 50%;
+  --parallax-height: 80%;
 }
 
 #fishbowl {
-    width: 26.25em;
-}
-
-#content>p {
-    width: 18em;
-    margin: 0 0 -8.75em;
-}
-
-#parallax-1 {
-    position: absolute;
-    top: 75em;
-}
-
-#parallax-1 div{
-    width: 13.75em;
-    height: 18.75em;
-    background-color: #000;
+  --default-width: 26.25em;
+  --parallax-width: 48%;
+  --parallax-height: 40%;
 }

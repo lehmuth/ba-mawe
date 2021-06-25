@@ -1,1 +1,0 @@
-Promise.all([import('../modules/page-template.js')]).then(() => {});

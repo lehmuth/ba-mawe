@@ -15,10 +15,18 @@ export const products = {
     price: 25,
     sizable: true,
   },
-  'depression-is-real': {
-    name: 'Patch: Depression is real',
+  rorschach: {
+    name: 'Patch: Rorschach',
     subline: '15 x 15 cm Kollektion Depression',
-    image: '/assets/depression-is-real.jpg',
+    image: '/assets/rorschach.png',
+    donation: 5,
+    price: 10,
+    sizable: false,
+  },
+  pain: {
+    name: 'Patch: Pain',
+    subline: '15 x 15 cm Kollektion Depression',
+    image: '/assets/pain.png',
     donation: 5,
     price: 10,
     sizable: false,
@@ -31,7 +39,7 @@ export const products = {
     price: 10,
     sizable: false,
   },
-  'fishbowl': {
+  fishbowl: {
     name: 'Patch: Fishbowl',
     subline: '15 x 15 cm Kollektion Plastikverschmutzung',
     image: '/assets/fishbowl.png',
@@ -46,10 +54,29 @@ export const products = {
     donation: 5,
     price: 10,
     sizable: false,
-  }
+  },
+  human: {
+    name: 'Patch: Human',
+    subline: '15 x 15 cm Kollektion Rassismus',
+    image: '/assets/human.png',
+    donation: 5,
+    price: 10,
+    sizable: false,
+  },
 };
 
-export const sizes = ['S (b)', 'M (b)', 'L (b)', 'XL (b)', 'XXL (b)', 'S (w)', 'M (w)', 'L (w)', 'XL (w)', 'XXL (w)'];
+export const sizes = [
+  'S (b)',
+  'M (b)',
+  'L (b)',
+  'XL (b)',
+  'XXL (b)',
+  'S (w)',
+  'M (w)',
+  'L (w)',
+  'XL (w)',
+  'XXL (w)',
+];
 
 class ShoppingCart {
   constructor() {
