@@ -57,15 +57,3 @@
     margin-left: -1rem;
   }
 }
-
-/* CONTENT */
-
-#rorschach {
-  --default-width: 28.25em;
-  --parallax-width: 80%;
-  --parallax-height: 50%;
-}
-
-#pain {
-  --default-width: 21.75em;
-}

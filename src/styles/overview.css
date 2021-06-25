@@ -1,0 +1,68 @@
+@import './product.css';
+
+#pain {
+  --default-width: 21.75em;
+  --parallax-width: 30%;
+  --parallax-height: 60%;
+}
+
+#human {
+  --parallax-width: 50%;
+  --parallax-height: 60%;
+}
+
+.parallax-bar > a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  min-width: 85px;
+  border: solid 0.2em #000;
+  transition: all 0.2s linear;
+}
+
+.parallax-bar > a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.right .parallax-bar > a {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.parallax-bar > a > span {
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 1rem;
+  font-size: 2.5em;
+  line-height: 0.8em;
+}
+
+.theme {
+  display: none;
+}
+
+.mobile {
+  flex-direction: column;
+}
+
+.mobile .theme {
+  display: block;
+  margin: 0 calc(-1 * var(--container-padding));
+  padding: 1rem 0;
+  text-decoration: none;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 2.5em;
+  border: solid 0.2rem #000;
+  transition: all 0.2s linear;
+  text-transform: uppercase;
+}
+
+.mobile .theme:hover {
+  color: #000;
+  background-color: #fff;
+}

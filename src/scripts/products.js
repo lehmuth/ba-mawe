@@ -9,8 +9,15 @@ function updatePlusButtonParallaxDistance() {
     const imgHeight = product.querySelector('img').offsetHeight;
     const parallax = product.querySelector('parallax-container');
 
+    // const parallaxBar = product.parentNode.querySelector('.parallax-bar');
+    let barWidth = 0;
+    // if (parallaxBar) {
+    //   const parallaxElement = parallaxBar.querySelector(':first-child');
+    //   barWidth = parallaxElement ? parallaxElement.offsetWidth : 0;
+    // }
+
     let parallaxDistance = imgHeight - parallax.offsetHeight;
-    if (productDefaultWidth >= maxContentWidth) {
+    if (productDefaultWidth + barWidth >= maxContentWidth) {
       product.parentNode.classList.add('mobile');
     } else {
       product.parentNode.classList.remove('mobile');
@@ -24,7 +31,7 @@ function updatePlusButtonParallaxDistance() {
   });
 
   document.querySelectorAll('.parallax-bar').forEach((parallaxBar) => {
-    const parallaxElement = parallaxBar.querySelector('div');
+    const parallaxElement = parallaxBar.querySelector(':first-child');
     parallaxBar.setAttribute(
       'distance',
       -1 * (parallaxBar.offsetHeight - parallaxElement.offsetHeight)

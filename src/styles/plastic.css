@@ -69,17 +69,3 @@
     margin-left: -1rem;
   }
 }
-
-/* CONTENT */
-
-#sea-food {
-  --default-width: 26.25em;
-  --parallax-width: 50%;
-  --parallax-height: 80%;
-}
-
-#fishbowl {
-  --default-width: 26.25em;
-  --parallax-width: 48%;
-  --parallax-height: 40%;
-}

@@ -101,7 +101,7 @@
   align-self: stretch;
 }
 
-.parallax-bar div {
+.parallax-bar > * {
   position: absolute;
   bottom: 0;
   height: var(--parallax-height);
@@ -109,37 +109,16 @@
   background-color: #000;
 }
 
-.left .parallax-bar div {
+.left .parallax-bar > * {
   right: 0;
 }
 
-.right .parallax-bar div {
+.right .parallax-bar > * {
   left: 0;
 }
 
-.mobile ~ .parallax-bar {
+.mobile .parallax-bar {
   display: none;
-}
-
-#content > p {
-  width: 18em;
-  margin: 0 0 -8.75em;
-}
-
-@media screen and (max-width: 750px) {
-  #content > p {
-    margin-bottom: 0;
-  }
-}
-
-#oversized-t {
-  --default-width: 28.75em;
-}
-
-#cropped-t {
-  --default-width: 27.85em;
-  --parallax-width: 30%;
-  --parallax-height: 40%;
 }
 
 .mobile {
@@ -157,10 +136,74 @@
   margin-top: 1.25em;
 }
 
-.straight .mobile parallax-container {
+.straight.mobile parallax-container {
   right: 14.25em;
 }
 
-.reversed .mobile parallax-container {
+.reversed.mobile parallax-container {
   left: 14.25em;
+}
+
+/* Text block settings */
+
+#content > p {
+  max-width: 18em;
+}
+
+#content > p:first-of-type {
+  margin: 0 0 -8.75em;
+}
+
+@media screen and (max-width: 750px) {
+  #content > p:first-of-type {
+    margin-bottom: 0;
+  }
+}
+
+/* Individual settings */
+
+#oversized-t {
+  --default-width: 28.75em;
+}
+
+#cropped-t {
+  --default-width: 27.85em;
+  --parallax-width: 30%;
+  --parallax-height: 40%;
+}
+
+#human {
+  --default-width: 24.25em;
+  --parallax-width: 40%;
+  --parallax-height: 80%;
+}
+
+#sea-food {
+  --default-width: 26.25em;
+  --parallax-width: 50%;
+  --parallax-height: 80%;
+}
+
+#fishbowl {
+  --default-width: 26.25em;
+  --parallax-width: 48%;
+  --parallax-height: 40%;
+}
+
+#nothing-to-wear {
+  --default-width: 32.85em;
+  --parallax-width: 80%;
+  --parallax-height: 50%;
+}
+
+#rorschach {
+  --default-width: 28.25em;
+  --parallax-width: 80%;
+  --parallax-height: 50%;
+}
+
+#pain {
+  --default-width: 21.75em;
+  --parallax-width: 60%;
+  --parallax-height: 60%;
 }
