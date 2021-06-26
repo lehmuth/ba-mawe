@@ -10,6 +10,7 @@
   display: flex;
   --parallax-width: 0;
   --parallax-height: 0;
+  --parallax-min-width: 0;
 }
 
 .left {
@@ -107,6 +108,8 @@
   height: var(--parallax-height);
   width: var(--parallax-width);
   background-color: #000;
+  min-width: var(--parallax-min-width);
+  box-sizing: border-box;
 }
 
 .left .parallax-bar > * {
@@ -121,9 +124,12 @@
   display: none;
 }
 
-.mobile {
-  margin-right: 0;
-  margin-left: 0;
+.mobile.left {
+  padding-right: var(--container-padding);
+}
+
+.mobile.right {
+  padding-left: var(--container-padding);
 }
 
 .mobile .product {
@@ -172,12 +178,6 @@
   --parallax-height: 40%;
 }
 
-#human {
-  --default-width: 24.25em;
-  --parallax-width: 40%;
-  --parallax-height: 80%;
-}
-
 #sea-food {
   --default-width: 26.25em;
   --parallax-width: 50%;
@@ -190,12 +190,6 @@
   --parallax-height: 40%;
 }
 
-#nothing-to-wear {
-  --default-width: 32.85em;
-  --parallax-width: 80%;
-  --parallax-height: 50%;
-}
-
 #rorschach {
   --default-width: 28.25em;
   --parallax-width: 80%;
@@ -204,6 +198,14 @@
 
 #pain {
   --default-width: 21.75em;
-  --parallax-width: 60%;
-  --parallax-height: 60%;
 }
+
+#nothing-to-wear {
+  --default-width: 32.85em;
+}
+
+#human {
+  --default-width: 24.25em;
+}
+
+

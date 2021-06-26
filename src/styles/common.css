@@ -11,6 +11,13 @@ body {
   font-style: normal;
 }
 
+:root {
+  /* define overwritable css variables */
+  --burger-menu-animation-duration: 0.2s;
+  --burger-menu-font-size: 1rem;
+  --container-padding: 3.25rem;
+}
+
 body {
   background-color: #000;
 }

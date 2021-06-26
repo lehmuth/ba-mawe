@@ -32,11 +32,6 @@ const styles = css`
     width: 100%;
     margin: auto;
     background-color: #fff;
-
-    /* define overwritable css variables */
-    --burger-menu-animation-duration: 0.2s;
-    --burger-menu-font-size: 1em;
-    --container-padding: 3.25em;
   }
 
   #hero {

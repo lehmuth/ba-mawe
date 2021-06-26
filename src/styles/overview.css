@@ -1,14 +1,28 @@
 @import './product.css';
 
+#sea-food {
+  --parallax-min-width: 96px;
+}
+
+#rorschach {
+  --parallax-min-width: 90px;
+}
+
 #pain {
-  --default-width: 21.75em;
   --parallax-width: 30%;
   --parallax-height: 60%;
+}
+
+#nothing-to-wear {
+  --parallax-min-width: 104px;
+  --parallax-width: 80%;
+  --parallax-height: 50%;
 }
 
 #human {
   --parallax-width: 50%;
   --parallax-height: 60%;
+  --parallax-min-width: 96px;
 }
 
 .parallax-bar > a {
@@ -17,7 +31,6 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
-  min-width: 85px;
   border: solid 0.2em #000;
   transition: all 0.2s linear;
 }
@@ -50,7 +63,9 @@
 
 .mobile .theme {
   display: block;
-  margin: 0 calc(-1 * var(--container-padding));
+  box-sizing: border-box;
+  width: calc(100% + 2 * var(--container-padding));
+  margin-left: calc(-1 * var(--container-padding));
   padding: 1rem 0;
   text-decoration: none;
   background-color: #000;
