@@ -9,6 +9,7 @@ body {
   font-family: active, sans-serif;
   font-weight: 400;
   font-style: normal;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -41,8 +42,20 @@ h1 {
   font-weight: 400;
 }
 
+h2 {
+  font-size: 3.25em;
+  margin: 0;
+  font-weight: 400;
+}
+
 h3 {
   font-size: 2.5em;
+  margin: 0;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.5em;
   margin: 0;
   font-weight: 400;
 }

@@ -112,7 +112,6 @@ defineComponent(
     }
 
     attributeChangedCallback(name, oldVal, newVal) {
-      console.log('attr changed');
       if (oldVal !== newVal) {
         switch (name) {
           case 'value':

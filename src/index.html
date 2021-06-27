@@ -14,9 +14,117 @@
   </head>
   <body>
     <page-template>
+      <div id="content" slot="content">
+        <div id="slow-fashion">
+          <div>
+            <h3>Mit Slow Fashion Deinen Kleiderschrank Revolutionieren</h3>
+            <p>
+              Ein Shirt mehrere Möglichkeiten! Gestalte dich immer wieder neu
+              und trage für was du stehst!
+            </p>
+            <bold-button href="/overview.html">Wear the change</bold-button>
+          </div>
+          <img src="assets/wear-the-change.png" alt="Shirt" />
+        </div>
+        <div id="donation-goal">
+          <img src="assets/flag.svg" alt="Flag animation" />
+          <p><span>1.995 €</span>, haben wir bereits Zusammen gespendet</p>
+        </div>
+        <div id="support">
+          <div>
+            <h3>
+              Unterstütze Hilfsorganisationen und erhalte exklusive Belohnungen
+            </h3>
+            <p>
+              Mit jedem verkauften Artikel spenden wir einen Anteil an die von
+              dir ausgewählte Organisation um verschiedene Missstände auf der
+              Welt zu bekämpfen! Werde Teil der Bewegung und schalte mit Spenden
+              spezielle Rewards frei.
+            </p>
+            <bold-button href="/overview.html">Be the change</bold-button>
+          </div>
+          <img src="assets/present.svg" alt="Shirt" />
+        </div>
+        <div id="insta">
+          <h3>
+            Werde Teil der Gemeinschaft und verfolge unsere Aktionen auf
+            Instagram
+          </h3>
+          <img src="assets/instagram-mockup.png" alt="Instagram Mockup" />
+          <div>
+            <p>
+              Aktuelle Infos über Missstände und Releases. Außerdem gibt es
+              Wissenswertes, Umweltaktionen, sowie Challenges und Designconteste
+            </p>
+            <bold-button href="https://www.instagram.com/patch_wear_family/"
+              >Follow</bold-button
+            >
+          </div>
+        </div>
+      </div>
+      <div id="news" slot="content" class="oversize">
+        <div id="headline">Aktu<br />elles</div>
+        <div id="slideshow">
+          <div id="news1" class="news-element">
+            <div>
+              <h3 class="headline1">Design-Wettbewerb!!</h3>
+              <h3 class="headline2">Gegen Rassismus</h3>
+              <p>
+                Melde dich jetzt an und gib bis zum 15.08. dein Design ab.
+                Unsere Jury prüft die Machbarkeit und wählt die besten 8
+                Entwürfe aus euren Zusendungen aus. Danach seid wieder ihr
+                gefragt! Online könnt ihr in Battlevotings für euern Favoriten
+                stimmen! Das Siegermotiv wird mit Hilfe unserer Designer
+                umgesetzt und anschließend erhältlich sein.
+              </p>
+            </div>
+            <img
+              src="assets/design-contest.png"
+              alt="Design Wettbewerb Teaser"
+            />
+          </div>
+          <div id="news2" class="news-element">
+            <div>
+              <h3 class="headline1">Müllsammelaktion!!</h3>
+              <h3 class="headline2">Sauerei</h3>
+              <p>
+                Am Samstag den 07.08. starten wir eine gemeinsame
+                Müllsammelaktion! Schnappt euch eure Freunde und räumt ein
+                bisschen in euerm Viertel, im Wald oder an einem See auf. Macht
+                ein Foto von euerm Ergebnis, markiert uns auf Instagram und
+                erhaltet einen Code für einen speziellen Patch! Gegen die
+                Vermüllung unseres Planeten!
+              </p>
+            </div>
+            <img
+              src="assets/rubbish-collection.png"
+              alt="Müllsammelaktion Teaser"
+            />
+          </div>
+          <div id="news3" class="news-element">
+            <div>
+              <h3 class="headline1">Gewinnspiel!!</h3>
+              <h3 class="headline2">Patch Wear Family</h3>
+              <p>
+                Wir wollen uns bei euch Bedanken und verlosen ein Patch Wear
+                Family Set bestehend aus einem Shirt und einem Patch eurer Wahl!
+                Schaut einfach auf unserer Instagram Seite vorbei um zu erfahren
+                wie ihr in den Lostopf kommt. Das Gewinnspiel läuft bis zum
+                20.07.
+              </p>
+            </div>
+            <img src="assets/present.svg" alt="Gewinnspiel Teaser" />
+          </div>
+        </div>
+        <div id="controls">
+          <span id="control1"></span>
+          <span id="control2"></span>
+          <span id="control3"></span>
+        </div>
+      </div>
       <nav slot="content" id="bottom-nav" class="oversize">
         <a href="overview.html">SHIRTS & PATCHES</a>
-        <a href="plastic.html" nobracket>PLASTIKVER<br/>SCHMUTZUNG</a>
+        <a href="plastic.html" nobracket>PLASTIKVER<br />SCHMUTZUNG</a>
         <a href="depressions.html">DEPRESSIONEN</a>
         <a href="fast-fashion.html">FAST FASHION</a>
         <a href="racism.html">RASSISMUS</a>

@@ -1,0 +1,271 @@
+#content {
+  padding: 0 5.5em;
+}
+
+#content > h4 {
+  margin-top: 3em;
+  margin-left: 1.9rem;
+  text-transform: uppercase;
+}
+
+#content > p {
+  color: #585858;
+  max-width: 21.25rem;
+  margin-left: 1.9rem;
+}
+
+range-slider {
+  margin-top: 1.25em;
+  margin-bottom: 3rem;
+  font-size: 1.5em;
+}
+
+#donation-target {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+#donation-target > div {
+  width: 7em;
+  height: 8.75em;
+  border: solid 0.2rem #000;
+  cursor: pointer;
+  position: relative;
+  color: #fff;
+  background-color: #000;
+}
+
+#donate-specific {
+}
+
+#donate-specific .background svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+#donate-specific select {
+  position: absolute;
+  bottom: 0.5rem;
+  transform: translate(-50%, 0);
+  left: 50%;
+  appearance: none;
+  border: none;
+  padding: 0.2em 1em 0.2em 0.2em;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  line-height: inherit;
+  background-image: url(/assets/arrow-down.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: bottom 0.35em right 0.2em;
+  background-size: 0.48em;
+}
+
+#donate-specific select:focus {
+  outline: none;
+}
+
+#donate-all .background svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#donate-me .background svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.3em;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+
+.background svg path {
+  fill: #fff;
+}
+
+#donation-target > div:hover .background {
+  opacity: 0;
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem 0;
+  box-sizing: border-box;
+  text-align: center;
+  opacity: 0;
+  background-color: inherit;
+  color: inherit;
+  transition: all 0.3s linear;
+}
+
+#donation-target > div:hover .info {
+  opacity: 1;
+}
+
+#donation-target > div.active {
+  background-color: #fff;
+  color: #000;
+}
+
+#donation-target > div.active .background svg path {
+  fill: #000;
+}
+
+#donate-group radio-button {
+  flex: 0 0 7rem;
+}
+
+.separator {
+  height: 0.2rem;
+  width: 100%;
+  background-color: #000;
+  margin: 3rem 0;
+}
+
+#content > h3 {
+  text-transform: uppercase;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+#login-button {
+  font-size: 2.5em;
+  width: calc(50% - 0.625rem);
+}
+
+.row ~ .row {
+  margin-bottom: 1.05em;
+}
+
+#content text-field {
+  font-size: 1.5rem;
+}
+
+.row:nth-child(1) {
+  margin-right: 0.625rem;
+}
+
+.row:nth-child(2) {
+  margin-left: 0.625rem;
+}
+
+#name {
+  width: calc(50% - 0.625rem);
+}
+
+#prename {
+  width: calc(50% - 0.625rem);
+}
+
+#street {
+  width: calc(75% - 0.625rem);
+}
+
+#number {
+  width: calc(25% - 0.625rem);
+}
+
+#zip-code {
+  width: calc(30% - 0.625rem);
+}
+
+#city {
+  width: calc(70% - 0.625rem);
+}
+
+#mail {
+  width: 100%;
+}
+
+#content a {
+  color: #000;
+}
+
+#prices {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+}
+
+#labels {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+}
+
+#labels span:nth-child(2) {
+  font-size: 1rem;
+  line-height: 0.7em;
+  margin-bottom: 0.3em;
+  color: #585858;
+}
+
+#numbers {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  margin-left: 1rem;
+}
+
+#numbers span:nth-child(2) {
+  margin-top: 1rem;
+}
+
+#finish {
+  display: block;
+  font-size: 1.5rem;
+  width: calc(50% - 0.625rem);
+  min-width: 170px;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-bottom: 3em;
+}
+
+@media screen and (max-width: 750px) {
+  #content {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  #donation-target {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  #donation-target > div {
+    margin-top: 1rem;
+  }
+
+  #donate-group {
+    margin-top: 1rem;
+  }
+}

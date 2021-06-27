@@ -31,7 +31,7 @@ const styles = css`
     padding: 10px;
     background-color: #000;
     color: #fff;
-    border: solid 0.2em #000;
+    border: solid 0.2rem #000;
 
     /* Reset default a styles */
     text-decoration: none;

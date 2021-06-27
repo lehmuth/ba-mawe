@@ -1,0 +1,415 @@
+#hero {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+#hero img {
+  flex: 0 0 9.5em;
+  width: 9.5em;
+  object-fit: contain;
+}
+
+#hero div {
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background-color: #000;
+  color: #fff;
+  margin-left: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+#hero p {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 3.25em;
+}
+
+#target {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  align-items: center;
+  font-size: 1.5em;
+  margin: 2.5rem 0 1.5rem;
+}
+
+#target progress-bar {
+  flex: 1;
+  margin: 0 1rem;
+}
+
+#target #current-donation {
+  font-size: 3.25rem;
+}
+
+#target span:last-child {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+#info {
+  max-width: 18.25rem;
+}
+
+#rewards {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 14.5rem;
+  --reward-count: 3;
+  --current-reward: 0;
+}
+
+@media screen and (max-width: 760px) {
+  #rewards {
+    --reward-count: 2;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  #rewards {
+    --reward-count: 1;
+  }
+}
+
+#rewards > span {
+  flex: 0 0 auto;
+  font-size: 4rem;
+  background-color: #000;
+  color: #fff;
+  padding: 0 0.5rem 0.5rem;
+  transition: background-color 0.2s linear, color 0.2s linear;
+  border: solid 0.2rem #000;
+  cursor: pointer;
+}
+
+#rewards > span.invisible {
+  visibility: hidden;
+}
+
+#rewards > span:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+#rewards > span:first-child {
+  margin-right: 0.5rem;
+}
+
+#rewards > span:last-child {
+  margin-left: 0.5rem;
+}
+
+#slideshow {
+  flex: 1;
+  overflow: hidden;
+  align-self: stretch;
+  position: relative;
+}
+
+#slider {
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  position: relative;
+  --reward-width: calc(100% / var(--reward-count));
+  transition: left 0.3s linear;
+  left: calc(-1 * var(--current-reward) * var(--reward-width));
+}
+
+.reward {
+  flex: 0 0 var(--reward-width);
+  width: var(--reward-width);
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+.reward > div {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.reward img {
+  flex: 1 0 auto;
+  object-fit: cover;
+  max-height: 12.3em;
+  object-position: center;
+}
+
+.toolbar {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 0.5rem;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 1.7rem;
+}
+
+.toolbar .label {
+  font-size: 1rem;
+}
+
+.toolbar .redeemed-text {
+  display: none;
+  color: #585858;
+}
+
+.toolbar .available-text {
+  display: none;
+  color: #fff;
+  background-color: #000;
+  border: solid 0.2rem #000;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
+  padding: 0 0.2rem;
+  cursor: pointer;
+}
+
+.toolbar .available-text:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.toolbar .not-available-text {
+  display: none;
+  color: #fff;
+  background-color: #000;
+  padding: 0.2rem 0.2rem;
+  text-transform: uppercase;
+}
+
+.redeemed .toolbar .redeemed-text {
+  display: block;
+}
+
+.available .toolbar .available-text {
+  display: block;
+}
+
+.not-available .toolbar .not-available-text {
+  display: block;
+}
+
+#content > h3 {
+  text-transform: uppercase;
+  clear: both;
+  margin: 3rem 0;
+}
+
+.container {
+  padding: 0 5.5em;
+  margin: 2rem 0;
+}
+
+range-slider {
+  margin-top: 1.25em;
+  margin-bottom: 3rem;
+  font-size: 1.5em;
+}
+
+#donation-target {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+#donation-target > div {
+  width: 7em;
+  height: 8.75em;
+  border: solid 0.2rem #000;
+  cursor: pointer;
+  position: relative;
+  color: #fff;
+  background-color: #000;
+}
+
+#donate-specific .background svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+#donate-specific select {
+  position: absolute;
+  bottom: 0.5rem;
+  transform: translate(-50%, 0);
+  left: 50%;
+  appearance: none;
+  border: none;
+  padding: 0.2em 1em 0.2em 0.2em;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  line-height: inherit;
+  background-image: url(/assets/arrow-down.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: bottom 0.35em right 0.2em;
+  background-size: 0.48em;
+}
+
+#donate-specific select:focus {
+  outline: none;
+}
+
+#donate-all .background svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#donate-me .background svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.3em;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+
+.background svg path {
+  fill: #fff;
+}
+
+#donation-target > div:hover .background {
+  opacity: 0;
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem 0;
+  box-sizing: border-box;
+  text-align: center;
+  opacity: 0;
+  background-color: inherit;
+  color: inherit;
+  transition: all 0.3s linear;
+}
+
+#donation-target > div:hover .info {
+  opacity: 1;
+}
+
+#donation-target > div.active {
+  background-color: #fff;
+  color: #000;
+}
+
+#donation-target > div.active .background svg path {
+  fill: #000;
+}
+
+#donate-group radio-button {
+  flex: 0 0 7rem;
+}
+
+#payment-group {
+  margin-top: 2rem;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+#login-button {
+  font-size: 2.5em;
+  width: calc(50% - 0.625rem);
+}
+
+.row ~ .row {
+  margin-bottom: 1.05em;
+}
+
+#content text-field {
+  font-size: 1.5rem;
+}
+
+#name {
+  width: calc(50% - 0.625rem);
+}
+
+#prename {
+  width: calc(50% - 0.625rem);
+}
+
+#street {
+  width: calc(75% - 0.625rem);
+}
+
+#number {
+  width: calc(25% - 0.625rem);
+}
+
+#zip-code {
+  width: calc(30% - 0.625rem);
+}
+
+#city {
+  width: calc(70% - 0.625rem);
+}
+
+#mail {
+  width: 100%;
+}
+
+#content a {
+  color: #000;
+}
+
+.button-bar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+#updateDonationBar {
+  justify-content: flex-end;
+}
+
+.container bold-button {
+  font-size: 2.5rem;
+}
+
+#data-headline {
+  margin-top: 6rem;
+}
+
+#delete-button {
+  font-size: 1rem;
+}

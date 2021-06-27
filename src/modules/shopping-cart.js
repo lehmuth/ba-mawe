@@ -24,7 +24,6 @@ defineComponent(
     render() {
       this.container.innerHTML = '';
       for (let id of shoppingCart.getAllIds()) {
-        console.log(id);
         let line = document.createElement('div', {
           is: 'shopping-cart-element',
         });

@@ -111,6 +111,12 @@ defineComponent(
 
     attributeChangedCallback(name, oldVal, newVal) {
       if (oldVal != newVal) {
+        switch (name) {
+          case 'value':
+            this.dispatchEvent(
+              new CustomEvent('change', { detail: { value: this.value } })
+            );
+        }
         this.render();
       }
     }

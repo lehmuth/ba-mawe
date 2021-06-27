@@ -9,16 +9,23 @@ const template = html`
     <div id="content">
       <div id="first-line">
         <div id="title"></div>
-        <size-select id="size" value="0"></size-select>
-        <div id="counter">
+        <size-select id="size" value="0" class="desktop"></size-select>
+        <div id="counter" class="desktop">
           <counter-spinner id="counter-value" value="1"></counter-spinner>X
         </div>
-        <div id="price"><span id="price-value"></span>€</div>
+        <div id="price" class="desktop"><span id="price-value"></span>€</div>
       </div>
       <div id="subline"></div>
       <div id="donation">
         <span id="donation-value"></span>€ werden gespendet
       </div>
+    </div>
+    <div class="mobile">
+      <size-select id="size-mobile" value="0"></size-select>
+      <div id="counter-mobile">
+        <counter-spinner id="counter-value-mobile" value="1"></counter-spinner>X
+      </div>
+      <div id="price-mobile"><span id="price-value-mobile"></span>€</div>
     </div>
   </div>
 `;
@@ -28,18 +35,18 @@ const styles = css`
     display: flex;
     flex-flow: row nowrap;
     border-bottom: solid 0.12em #000;
-    padding: 1.25em 0;
+    padding: 1.25em 1.9em;
   }
 
   #image {
-    flex: 0 0 6em;
+    flex: 0 0 4em;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
   }
 
   #content {
-    flex: 3 1 auto;
+    flex: 1 1 calc(100% - 5em);
     display: flex;
     flex-flow: column nowrap;
     margin-left: 1em;
@@ -80,6 +87,56 @@ const styles = css`
   #donation {
     color: #585858;
   }
+
+  .mobile {
+    flex: 1 0 calc(100% - 2 * 1.9rem);
+    display: none;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 1rem 0 0;
+    font-size: 1.5em;
+  }
+
+  .mobile > * {
+    flex: 1;
+  }
+
+  #size-mobile {
+    visibility: hidden;
+  }
+
+  #size-mobile.sizable {
+    visibility: visible;
+  }
+
+  #counter-mobile {
+    text-align: center;
+  }
+
+  #price-mobile {
+    text-align: right;
+  }
+
+  @media screen and (max-width: 590px) {
+    #container {
+      flex-wrap: wrap;
+    }
+
+    .desktop {
+      display: none;
+    }
+
+    .mobile {
+      display: flex;
+    }
+  }
+
+  @media screen and (max-width: 410px) {
+    #container {
+      padding: 1.25em 0;
+    }
+  }
 `;
 
 defineComponent(
@@ -95,8 +152,11 @@ defineComponent(
       this.image = shadowRoot.querySelector('#image');
       this.titleElem = shadowRoot.querySelector('#title');
       this.size = shadowRoot.querySelector('#size');
+      this.sizeMobile = shadowRoot.querySelector('#size-mobile');
       this.counter = shadowRoot.querySelector('#counter-value');
+      this.counterMobile = shadowRoot.querySelector('#counter-value-mobile');
       this.price = shadowRoot.querySelector('#price-value');
+      this.priceMobile = shadowRoot.querySelector('#price-value-mobile');
       this.subline = shadowRoot.querySelector('#subline');
       this.donation = shadowRoot.querySelector('#donation-value');
       this.updateAmount = this.updateAmount.bind(this);
@@ -107,12 +167,16 @@ defineComponent(
       this.productId = this.productId || 'test';
       this.render();
       this.size.addEventListener('change', this.updateSize);
+      this.sizeMobile.addEventListener('change', this.updateSize);
       this.counter.addEventListener('change', this.updateAmount);
+      this.counterMobile.addEventListener('change', this.updateAmount);
     }
 
     disconnectedCallback() {
       this.size.removeEventListener('change', this.updateSize);
+      this.sizeMobile.removeEventListener('change', this.updateSize);
       this.counter.removeEventListener('change', this.updateAmount);
+      this.counterMobile.removeEventListener('change', this.updateAmount);
     }
 
     get productId() {
@@ -131,10 +195,12 @@ defineComponent(
 
     updateSize() {
       shoppingCart.updateSize(this.productId, this.size.value);
+      this.render();
     }
 
     updateAmount() {
       shoppingCart.updateAmount(this.productId, this.counter.value);
+      this.render();
     }
 
     render() {
@@ -143,17 +209,22 @@ defineComponent(
         this.image.style.backgroundImage = `url(${product.image})`;
         this.titleElem.innerHTML = product.name;
         this.price.innerHTML = product.price;
+        this.priceMobile.innerHTML = product.price;
         this.subline.innerHTML = product.subline;
         this.donation.innerHTML = product.donation;
         const details = shoppingCart.get(this.productId);
         if (details) {
           if (product.sizable) {
-            this.size.setAttribute('class', 'sizable');
+            this.size.classList.add('sizable');
             this.size.setAttribute('value', details.size);
+            this.sizeMobile.classList.add('sizable');
+            this.sizeMobile.setAttribute('value', details.size);
           } else {
-            this.size.removeAttribute('class');
+            this.size.classList.remove('sizable');
+            this.sizeMobile.classList.remove('sizable');
           }
           this.counter.setAttribute('value', details.amount);
+          this.counterMobile.setAttribute('value', details.amount);
         }
       }
     }
