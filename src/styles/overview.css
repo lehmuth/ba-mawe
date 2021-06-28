@@ -1,5 +1,85 @@
 @import './product.css';
 
+#hero {
+  height: 24em;
+  margin: 1rem 0 1rem 1rem;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+#hero img {
+  flex: 0 0 17.25em;
+  width: 17.25em;
+  height: 100%;
+  object-fit: contain;
+}
+
+#video {
+  flex: 1 1 auto;
+  margin-left: 1rem;
+  position: relative;
+}
+
+#video video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+#video #layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  /* background-color: #000; */
+  opacity: 0.3;
+}
+
+#video p {
+  margin: 0;
+  color: #fff;
+  position: absolute;
+  bottom: 1rem;
+  right: 3rem;
+  z-index: 3;
+  font-size: 3.25em;
+  text-align: right;
+  text-transform: uppercase;
+  text-shadow: 0.05rem 0.05rem 0.2rem #000;
+}
+
+@media screen and (max-width: 700px) {
+  #hero {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+  }
+
+  #hero #logo {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  #hero #placeholder {
+    flex: 1;
+    background-color: #000;
+    margin-left: 1rem;
+  }
+
+  #hero #video {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+}
+
 #sea-food {
   --parallax-min-width: 96px;
 }
