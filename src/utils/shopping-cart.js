@@ -17,7 +17,7 @@ export const products = {
   },
   rorschach: {
     name: 'Patch: Rorschach',
-    subline: '15 x 15 cm Kollektion Depression',
+    subline: '7,5 x 10 cm Kollektion Depression',
     image: '/assets/rorschach.png',
     donation: 5,
     price: 10,
@@ -25,7 +25,7 @@ export const products = {
   },
   pain: {
     name: 'Patch: Pain',
-    subline: '15 x 15 cm Kollektion Depression',
+    subline: '7,5 x 10 cm Kollektion Depression',
     image: '/assets/pain.png',
     donation: 5,
     price: 10,
@@ -33,7 +33,7 @@ export const products = {
   },
   'sea-food': {
     name: 'Patch: Sea Food',
-    subline: '15 x 15 cm Kollektion Plastikverschmutzung',
+    subline: '7,5 x 10 cm Kollektion Plastikverschmutzung',
     image: '/assets/seafood.png',
     donation: 5,
     price: 10,
@@ -41,7 +41,7 @@ export const products = {
   },
   fishbowl: {
     name: 'Patch: Fishbowl',
-    subline: '15 x 15 cm Kollektion Plastikverschmutzung',
+    subline: '7,5 x 10 cm Kollektion Plastikverschmutzung',
     image: '/assets/fishbowl.png',
     donation: 5,
     price: 10,
@@ -49,7 +49,7 @@ export const products = {
   },
   'nothing-to-wear': {
     name: 'Patch: Nothing To Wear',
-    subline: '15 x 15 cm Kollektion Fast Fashion',
+    subline: '7,5 x 10 cm Kollektion Fast Fashion',
     image: '/assets/nothing-to-wear.png',
     donation: 5,
     price: 10,
@@ -57,7 +57,7 @@ export const products = {
   },
   human: {
     name: 'Patch: Human',
-    subline: '15 x 15 cm Kollektion Rassismus',
+    subline: '7,5 x 10 cm Kollektion Rassismus',
     image: '/assets/human.png',
     donation: 5,
     price: 10,

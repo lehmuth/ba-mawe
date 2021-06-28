@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <meta
@@ -15,18 +15,28 @@
   <body>
     <page-template>
       <div id="hero" slot="hero">
-        <h2>
-          Unterstütze Hilfsorganisationen<br />
-          <div id="anim"></div>
-          und erhalte exklusive Belohnungen
-        </h2>
-        <p>
-          Mit jedem verkauften Artikel spenden wir einen Anteil an die von dir
-          ausgewählte Organisation um verschiedene Missstände auf der Welt zu
-          bekämpfen! Werde Teil der Bewegung und schalte mit Spenden spezielle
-          Rewards frei.
-        </p>
-        <progress-bar min="0" max="100" current="80"></progress-bar>
+        <div>
+          <h2>
+            Unterstütze Hilfsorganisationen<br />
+            und erhalte exklusive Belohnungen
+          </h2>
+          <p>
+            Mit jedem verkauften Artikel spenden wir einen Anteil an die von dir
+            ausgewählte Organisation um verschiedene Missstände auf der Welt zu
+            bekämpfen! Werde Teil der Bewegung und schalte mit Spenden spezielle
+            Rewards frei.
+          </p>
+        </div>
+        <div id="anim">
+          <div>
+            <div>
+              <img src="assets/Cafébecher.png" alt="Cafébecher" />
+              <img src="assets/Poster.png" alt="Poster Human" />
+              <img src="assets/PWF-Patch.png" alt="Patch Wear Family Patch" />
+              <img src="assets/Buttons.png" alt="Patch Wear Family Buttons" />
+            </div>
+          </div>
+        </div>
       </div>
       <div id="donation-goal" slot="content">
         <img src="assets/flag.svg" alt="Flag animation" />
@@ -114,9 +124,13 @@
               </svg>
             </div>
             <div class="info">NUR DIE AUSGEWÄHLTE ORGANISATION</div>
-            <select>
-              <option>WWF</option>
-              <option>Depr. Hilfe</option>
+            <select id="donation-target-select">
+              <option>OceanCare</option>
+              <option value="Deutsche Depressions Hilfe">Depr. Hilfe</option>
+              <option value="Fashion Revolution Foundation">
+                Fashion R. F.
+              </option>
+              <option value="F. C. Flick Stiftung">F. C. Flick</option>
             </select>
           </div>
           <div id="donate-all">
@@ -179,7 +193,7 @@
             </div>
             <div class="info">ALLE ORGANISATIONEN</div>
           </div>
-          <div id="donate-me">
+          <div id="donate-me" class="active">
             <div class="background">
               <svg
                 version="1.1"
@@ -253,8 +267,8 @@
           </div>
         </div>
         <radio-button-group id="donate-group">
-          <radio-button value="once">Einmalig</radio-button>
-          <radio-button value="monthly" checked>Monatlich</radio-button>
+          <radio-button value="EINMALIG">Einmalig</radio-button>
+          <radio-button value="MONATLICH" checked>Monatlich</radio-button>
           <radio-button value="never">Nicht Spenden</radio-button>
         </radio-button-group>
         <div class="separator"></div>
@@ -267,6 +281,10 @@
         </radio-button-group>
         <div id="prices">
           <div id="labels">
+            <span
+              ><span id="donation-repetition-display">MONATLICH</span> an</span
+            >
+            <span id="donation-target-display">ALLE und das LABEL</span>
             <span>SPENDEN</span>
           </div>
           <div id="numbers">

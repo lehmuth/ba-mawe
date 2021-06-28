@@ -50,7 +50,7 @@
   font-size: 3.25em;
   text-align: right;
   text-transform: uppercase;
-  text-shadow: 0.05rem 0.05rem 0.2rem #000;
+  text-shadow: 0.05rem 0.05rem 0.2rem rgba(0, 0, 0, 0.6);
 }
 
 @media screen and (max-width: 700px) {
@@ -221,7 +221,7 @@
 #support > img {
   flex: 1 0 calc(50% - 3.75em);
   max-width: 13em;
-  margin-left: 1.5em;
+  margin-left: 3.75em;
   object-fit: contain;
   object-position: left;
 }
@@ -336,6 +336,7 @@
   overflow: hidden;
   --current-news: 0;
   --news-width: calc(100vw - 10.75rem);
+  background-color: rgba(0, 0, 0, 0.06);
 }
 
 #headline,
@@ -368,7 +369,6 @@
   display: flex;
   flex-flow: row nowrap;
   transition: left 0.3s linear;
-  background-color: rgba(0, 0, 0, 0.06);
   left: calc(-1 * var(--current-news) * var(--news-width));
 }
 

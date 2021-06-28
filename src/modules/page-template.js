@@ -37,6 +37,7 @@ const styles = css`
   #hero {
     flex: 0 0 auto;
     width: 100%;
+    z-index: 2;
   }
 
   burger-menu-icon {

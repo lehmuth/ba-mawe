@@ -1,30 +1,88 @@
 #hero {
-  padding: 1rem var(--container-padding) 0;
+  padding: 0 var(--container-padding) 0;
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+}
+
+#hero > div:nth-child(1) {
+  margin-top: 3rem;
+}
+
+#hero h2 {
+  line-height: 1em;
 }
 
 #hero p {
-  max-width: 22.5rem;
-}
-
-#hero progress-bar {
-  display: block;
-  max-width: 22.5rem;
+  z-index: 2;
+  color: #fff;
+  background-color: #000;
+  margin-left: calc(-1 * var(--container-padding));
+  margin-right: calc(-1 * var(--container-padding));
+  padding: 2rem var(--container-padding);
+  position: relative;
 }
 
 #hero #anim {
+  --reward-count: 0;
+  --reward-height: 19.29rem;
+  flex: 0 0 15rem;
+  align-self: stretch;
   display: block;
   width: 15rem;
-  height: 17.5rem;
-  border-radius: 4rem;
-  background-color: #000;
-  float: right;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  z-index: 1;
+}
+
+#hero #anim > div {
+  position: relative;
+  flex: 0 0 var(--reward-height);
+  height: var(--reward-height);
+  overflow: hidden;
+}
+
+#hero #anim > div > div {
+  animation: rewardslide 10s steps(4) infinite;
+  position: relative;
+  top: calc(-1 * var(--reward-count) * var(--reward-height));
+  transition: top 0.3s linear;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+#hero #anim img {
+  width: 100%;
+  height: var(--reward-height);
+  object-fit: cover;
+}
+
+@media screen and (max-width: 720px) {
+  #hero {
+    flex-direction: column-reverse;
+  }
+
+  #hero #anim {
+    margin-top: 3rem;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  #hero h2 {
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
 }
 
 #donation-goal {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  margin-bottom: 7.5rem;
+  margin: 5rem 0 7.5rem;
 }
 
 #donation-goal > img {
@@ -63,6 +121,15 @@
 
 #content > h3 {
   text-transform: uppercase;
+}
+
+#login-button {
+  font-size: 2.5em;
+  width: calc(50% - 0.625rem);
+}
+
+.row ~ .row {
+  margin-bottom: 1.05em;
 }
 
 .row {
@@ -238,6 +305,7 @@ range-slider {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
+  align-items: stretch;
   font-size: 1.5rem;
   margin-top: 3rem;
 }
@@ -252,6 +320,7 @@ range-slider {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-end;
+  justify-content: flex-end;
   margin-left: 1rem;
 }
 
@@ -263,6 +332,10 @@ range-slider {
   margin-top: 2rem;
   margin-left: auto;
   margin-bottom: 3em;
+}
+
+.hidden {
+  display: none !important;
 }
 
 @media screen and (max-width: 750px) {

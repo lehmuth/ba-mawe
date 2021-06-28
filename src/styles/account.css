@@ -55,17 +55,35 @@
   align-items: center;
 }
 
+@media screen and (max-width: 760px) {
+  #target {
+    flex-direction: column;
+  }
+
+  #target progress-bar {
+    align-self: stretch;
+    margin: 1rem 0;
+  }
+}
+
 #info {
   max-width: 18.25rem;
+  margin-top: 2rem;
 }
 
 #rewards {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  height: 14.5rem;
   --reward-count: 3;
   --current-reward: 0;
+  --reward-width: calc(
+    (100vw - 2 * var(--container-padding) - 2 * 3.9rem) / var(--reward-count)
+  );
+  /* --reward-img-height: calc(
+    (var(--reward-width) - 1rem * var(--reward-count)) * 1.2863
+  ); */
+  height: calc(var(--reward-img-height) + 2.2rem);
 }
 
 @media screen and (max-width: 760px) {
@@ -81,11 +99,12 @@
 }
 
 #rewards > span {
-  flex: 0 0 auto;
+  flex: 0 0 2.2rem;
+  box-sizing: border-box;
   font-size: 4rem;
   background-color: #000;
   color: #fff;
-  padding: 0 0.5rem 0.5rem;
+  padding: 0 0.5rem;
   transition: background-color 0.2s linear, color 0.2s linear;
   border: solid 0.2rem #000;
   cursor: pointer;
@@ -116,36 +135,31 @@
 }
 
 #slider {
-  height: 100%;
   display: flex;
   flex-flow: row nowrap;
   align-items: stretch;
   position: relative;
-  --reward-width: calc(100% / var(--reward-count));
   transition: left 0.3s linear;
   left: calc(-1 * var(--current-reward) * var(--reward-width));
 }
 
 .reward {
   flex: 0 0 var(--reward-width);
-  width: var(--reward-width);
-  padding: 0 0.5rem;
   box-sizing: border-box;
 }
 
 .reward > div {
   display: flex;
+  padding: 0 0.5rem;
   flex-flow: column nowrap;
   align-items: stretch;
   justify-content: space-between;
-  width: 100%;
-  height: 100%;
 }
 
 .reward img {
   flex: 1 0 auto;
   object-fit: cover;
-  max-height: 12.3em;
+  width: 100%;
   object-position: center;
 }
 
@@ -328,6 +342,21 @@ range-slider {
   fill: #000;
 }
 
+@media screen and (max-width: 520px) {
+  #donation-target {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  #donation-target > div {
+    margin-top: 1rem;
+  }
+
+  #donate-group {
+    margin-top: 1rem;
+  }
+}
+
 #donate-group radio-button {
   flex: 0 0 7rem;
 }
@@ -404,6 +433,12 @@ range-slider {
 
 .container bold-button {
   font-size: 2.5rem;
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    padding: 0;
+  }
 }
 
 #data-headline {
