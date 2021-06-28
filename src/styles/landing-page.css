@@ -1,3 +1,85 @@
+#hero {
+  height: 24em;
+  margin: 1rem 0 1rem 1rem;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+#hero img {
+  flex: 0 0 17.25em;
+  width: 17.25em;
+  height: 100%;
+  object-fit: contain;
+}
+
+#video {
+  flex: 1 1 auto;
+  margin-left: 1rem;
+  position: relative;
+}
+
+#video video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+#video #layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  /* background-color: #000; */
+  opacity: 0.3;
+}
+
+#video p {
+  margin: 0;
+  color: #fff;
+  position: absolute;
+  bottom: 1rem;
+  right: 3rem;
+  z-index: 3;
+  font-size: 3.25em;
+  text-align: right;
+  text-transform: uppercase;
+  text-shadow: 0.05rem 0.05rem 0.2rem #000;
+}
+
+@media screen and (max-width: 700px) {
+  #hero {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+  }
+
+  #hero #logo {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  #hero #placeholder {
+    flex: 1;
+    background-color: #000;
+    margin-left: 1rem;
+  }
+
+  #hero #video {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+}
+
+/* CONTENT */
+
 #slow-fashion {
   display: flex;
   flex-flow: row nowrap;
@@ -256,7 +338,8 @@
   --news-width: calc(100vw - 10.75rem);
 }
 
-#headline {
+#headline,
+#headline-mobile {
   flex: 0 0 10.75rem;
   display: flex;
   flex-flow: column nowrap;
@@ -272,6 +355,12 @@
   z-index: 2;
 }
 
+#headline-mobile {
+  display: none;
+  text-align: center;
+  flex-basis: 4.5rem;
+}
+
 #slideshow {
   z-index: 1;
   flex: 1 1 auto;
@@ -279,6 +368,7 @@
   display: flex;
   flex-flow: row nowrap;
   transition: left 0.3s linear;
+  background-color: rgba(0, 0, 0, 0.06);
   left: calc(-1 * var(--current-news) * var(--news-width));
 }
 
@@ -286,7 +376,6 @@
   min-width: var(--news-width);
   max-width: var(--news-width);
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.06);
   display: flex;
   flex-flow: row nowrap;
   padding: 1.5em 3.5em 2em 1.5em;
@@ -332,6 +421,36 @@
 #controls span:hover,
 #controls span.active {
   background-color: #000;
+}
+
+@media screen and (max-width: 750px) {
+  #news {
+    flex-direction: column;
+    --news-width: 100vw;
+    height: auto;
+  }
+
+  #headline {
+    display: none;
+  }
+
+  #headline-mobile {
+    display: block;
+  }
+
+  #controls {
+    left: 1.5em;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .news-element {
+    padding-right: 1.5rem;
+  }
+
+  .news-element img {
+    display: none;
+  }
 }
 
 /* Bottom navigation */
